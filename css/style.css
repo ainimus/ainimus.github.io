@@ -6,9 +6,9 @@
         Primary use:	--
 */
 
-/* 
+/*
         --- Table Of Content ---
-        
+
         1. preload
         2. menu
         3. home-background
@@ -18,7 +18,7 @@
         7. service
         8.contact
         9.responsive
-        
+
 */
 
 
@@ -96,7 +96,7 @@ body{
     height:50px;
     width:50px;
     cursor: pointer;
-    background-color: #f61947;
+    background-color: #1f9983;
 }
 .color {
     position:absolute;
@@ -104,7 +104,7 @@ body{
     left:10px;
     width:40px;
     height:40px;
-    background-color:#f61947;
+    background-color:#1f9983;
     z-index:1001;
 }
 
@@ -242,7 +242,7 @@ body{
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #f61947;
+    color: #1f9983;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
@@ -250,7 +250,7 @@ body{
     background-color: transparent;
 }
 .navbar-default.small .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-    color: #f61947 !important;
+    color: #1f9983 !important;
     background-color: transparent;
 }
 .navbar-nav > li > a {
@@ -270,12 +270,12 @@ body{
 .site-title h3 span{
     font-family: 'Ubuntu', sans-serif;
     font-size: 45px;
-    color: #f61947;
+    color: #1f9983;
     margin-top: 0px;
     letter-spacing: 1px;
 }
 .navbar-default.small .site-title h3{
-    color: #f61947;
+    color: #1f9983;
 }
 
 .navbar-toggle {
@@ -325,7 +325,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: #b61924;
-    background: url(../img/img1.jpg) 50% 0 no-repeat fixed;
+    /* background: url(../img/img1.jpg) 50% 0 no-repeat fixed; */
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -421,7 +421,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background: #f61947;
+    background: #1f9983;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;
@@ -436,7 +436,7 @@ body{
 .hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
     color: white;
     text-decoration: none;
-    border: 2px solid #f61947;
+    border: 2px solid #1f9983;
 }
 .hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
     -webkit-transform: scaleX(1);
@@ -456,7 +456,7 @@ body{
     transform: translate(-50%,-50%);
 }
 .smothscroll {
-    color: #f61947;
+    color: #1f9983;
     font-size: 30px;
 }
 .smothscroll:hover {
@@ -536,7 +536,7 @@ section:nth-of-type(2){background:black;height:1600px;}
     transition: 0.5s;
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
-    -o-transition: 0.5s; 	
+    -o-transition: 0.5s;
     color: white;
 }
 .scroll:hover .fa {
@@ -565,6 +565,7 @@ section:nth-of-type(2){background:black;height:1600px;}
     background-color: white;
     margin-top: 0px;
     position: relative;
+    padding-bottom: 60px;
 }
 .about-content {
     padding-top: 100px;
@@ -613,7 +614,7 @@ section:nth-of-type(2){background:black;height:1600px;}
 .underline1 {
     height: 15px;
     width: 15px;
-    background-color: #f61947;
+    background-color: #1f9983;
     margin: auto;
     margin-top: 20px;
     transform: rotate(-135deg);
@@ -758,15 +759,15 @@ section:nth-of-type(2){background:black;height:1600px;}
     margin-top: 50px;
 }
 .colorbutton{
-    color: #f61947;
-    border-color: #f61947;
+    color: #1f9983;
+    border-color: #1f9983;
     margin-left: 0px;
 }
 .about-details h3 span{
     font-size: 49px;
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 1px;
-    color: #f61947;
+    color: #1f9983;
     margin-top: 0px;
     padding: 0px;
     margin-bottom: 19px;
@@ -791,12 +792,12 @@ section:nth-of-type(2){background:black;height:1600px;}
     background: none;
     color: white;
     position: relative;
-    border: 1px solid #f61947;
+    border: 1px solid #1f9983;
     padding: 11px 19px;
     font-size: 16px;
     position: relative;
     z-index: 111;
-    background-color: #f61947;
+    background-color: #1f9983;
 }
 .about-contact1::after {
     position: absolute;
@@ -938,12 +939,12 @@ section:nth-of-type(2){background:black;height:1600px;}
     margin-bottom: 0px;
 }
 .work-statistics:hover .stat-icon{
-    color: #f61947;
+    color: #1f9983;
 }
 .stat-icon {
     font-size: 36px;
     margin-top: 0px;
-    color: #f61947;
+    color: #1f9983;
     transition: .4s;
     -o-transition: .4s;
     -webkit-transition: .4s;
@@ -980,7 +981,7 @@ section:nth-of-type(2){background:black;height:1600px;}
     font-size: 35px;
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 2px;
-    color: #f61947;
+    color: #1f9983;
     margin-top: 0px;
     font-weight: 900;
     line-height: 33px;
@@ -1015,7 +1016,7 @@ section:nth-of-type(2){background:black;height:1600px;}
     background: white;
     height: 19px;
     border-radius: 0px;
-    border: 1px solid #f61947;
+    border: 1px solid #1f9983;
 }
 #skill-main h3 {
     margin: 0px;
@@ -1036,7 +1037,7 @@ section:nth-of-type(2){background:black;height:1600px;}
 .expand {
     height: 13px;
     margin: 2px 2px;
-    background: #f61947;
+    background: #1f9983;
     position: absolute;
     border-radius: 0px;
 }
@@ -1094,7 +1095,7 @@ section:nth-of-type(2){background:black;height:1600px;}
     font-size: 35px;
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 1px;
-    color: #f61947;
+    color: #1f9983;
     margin-top: 0px;
     font-weight: 900;
     line-height: 33px;
@@ -1138,7 +1139,7 @@ section:nth-of-type(2){background:black;height:1600px;}
     margin: 16px 0px;
     font-size: 23px;
     letter-spacing: 0px;
-    color: #f61947;
+    color: #1f9983;
     position: relative;
     transition: .4s;
     -webkit-transition: .4s;
@@ -1173,7 +1174,7 @@ section:nth-of-type(2){background:black;height:1600px;}
 }
 .service-icon {
     font-size: 37px;
-    color: #f61947;
+    color: #1f9983;
     transition: .4s;
     -webkit-transition: .4s;
     -moz-transition: .4s;
@@ -1240,13 +1241,13 @@ section:nth-of-type(2){background:black;height:1600px;}
 }
 .message-row{
     height: 550px;
-    background-color: #f61947;
+    background-color: #1f9983;
     margin: 0px 0px;
 }
 .message-col {
     height: 100%;
     display: table;
-    background-color: #f61947;
+    background-color: #1f9983;
 }
 .faq-client-img{
     width: 100%;
@@ -1289,7 +1290,7 @@ section:nth-of-type(2){background:black;height:1600px;}
 .panel-default > .panel-heading {
     color: #FFF;
     background-color: black;
-    border-color: #f61947;
+    border-color: #1f9983;
 }
 .panel-heading {
     padding: 15px 15px;
@@ -1380,7 +1381,7 @@ p {
 .overlay {
     height: 100%;
     width: 100%;
-    background: #f61947;
+    background: #1f9983;
     position: absolute;
     z-index: 1;
     opacity: 0;
@@ -1458,14 +1459,14 @@ p {
 
 #filters li span {
     display: block;
-    padding:5px 20px;		
+    padding:5px 20px;
     text-decoration:none;
     color:black;
     cursor: pointer;
 }
 
 #filters li span.active {
-    background: #f61947;
+    background: #1f9983;
     color: #fff;
 }
 
@@ -1493,7 +1494,7 @@ p {
     position: relative;
     top:0;
     -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);	
+    transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .portfolio-wrapper img{
 
@@ -1594,7 +1595,7 @@ p {
 
 .fancybox-skin {
     position: relative;
-    background: #f61947;
+    background: #1f9983;
     color: #444;
     text-shadow: none;
     -webkit-border-radius: 4px;
@@ -1683,7 +1684,7 @@ p {
     height: 100%;
     cursor: pointer;
     text-decoration: none;
-    background: transparent url('../img/blank.html'); 
+    background: transparent url('../img/blank.html');
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     z-index: 8040;
 }
@@ -1793,7 +1794,7 @@ p {
     display: inline-block;
     margin-right: -100%;
     padding: 2px 20px;
-    background: transparent; 
+    background: transparent;
     background: rgba(0, 0, 0, 0.8);
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -1831,12 +1832,12 @@ only screen and (min-device-pixel-ratio: 1.5){
 
     #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
         background-image: url('../fancybox_sprite%402x.html');
-        background-size: 44px 152px; 
+        background-size: 44px 152px;
     }
 
     #fancybox-loading div {
         background-image: url('../fancybox_loading%402x.html');
-        background-size: 24px 24px; 
+        background-size: 24px 24px;
     }
 }
 #fancybox-buttons {
@@ -2040,7 +2041,7 @@ only screen and (min-device-pixel-ratio: 1.5){
     font-size: 35px;
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 1px;
-    color: #f61947;
+    color: #1f9983;
     margin-top: 0px;
     font-weight: 900;
     line-height: 33px;
@@ -2055,7 +2056,7 @@ only screen and (min-device-pixel-ratio: 1.5){
     padding: 35px 50px;
     margin: 0 20px 30px;
     border-radius: 0 70px 0 70px;
-    border: 5px solid #f61947;
+    border: 5px solid #1f9983;
     border-left: none;
     border-right: none;
     text-align: center;
@@ -2078,7 +2079,7 @@ only screen and (min-device-pixel-ratio: 1.5){
     margin: 0 0 7px 0;
     font-size: 20px;
     font-weight: 600;
-    color: #f61947;
+    color: #1f9983;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -2100,7 +2101,7 @@ only screen and (min-device-pixel-ratio: 1.5){
     opacity: 0.8;
     transition: all 0.3s ease 0s;
 }
-.owl-theme .owl-controls .owl-page.active span{ background: #f61947; }
+.owl-theme .owl-controls .owl-page.active span{ background: #1f9983; }
 section {
     height: auto;
     margin: 0px 0;
@@ -2134,7 +2135,7 @@ section {
 }
 .sponsors-grid {
     margin-top: 0px;
-    background-color: #f61947;
+    background-color: #1f9983;
     padding-bottom: 70px;
     padding-top: 100px;
 }
@@ -2182,7 +2183,7 @@ section {
     font-size: 35px;
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 1px;
-    color: #f61947;
+    color: #1f9983;
     margin-top: 0px;
     font-weight: 900;
     line-height: 33px;
@@ -2225,7 +2226,7 @@ section {
 }
 .post-slide .post-title a {
     display: inline-block;
-    color: #f61947;
+    color: #1f9983;
     transition: all 0.3s ease 0s;
     font-size: 19px;
     font-weight: 600;
@@ -2315,7 +2316,7 @@ section {
     top: 0;
     left: 0;
     background-size: cover;
-    padding: 100px 0px;
+    padding: 0px 0px;
     padding-bottom: 0px;
 }
 #contact-content:after{
@@ -2386,24 +2387,24 @@ section {
     font-size: 35px;
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 1px;
-    color: #f61947;
+    color: #1f9983;
     margin-top: 0px;
     font-weight: 900;
     line-height: 33px;
 }
 .map {
     width:100%;
-    height:650px;	
+    height:650px;
 }
 
 .map-wrap {
-    position:relative; 
+    position:relative;
 }
 
 .overlay-map {
     width:100%;
     height: 100%;
-    position:absolute; 
+    position:absolute;
     top:0;
     z-index: 11;
 }
@@ -2479,7 +2480,7 @@ section {
     margin-top: 50px;
 }
 .has-error .help-block {
-    color: #f61947;
+    color: #1f9983;
     text-align: center;
 }
 .has-error .form-control:enabled {
@@ -2507,36 +2508,36 @@ section {
     width: 100%;
 }
 .btn-success.disabled {
-    background-color: #f61947;
-    border-color: #f61947;
+    background-color: #1f9983;
+    border-color: #1f9983;
     color: white;
     cursor: not-allowed;
 }
 .btn.disabled:hover{
-    background-color: #f61947;
-    border-color: #f61947;
+    background-color: #1f9983;
+    border-color: #1f9983;
     color: white;
     cursor: not-allowed;
 }
 .btn-success:hover{
     cursor: pointer;
-    background-color: #f61947;
-    border-color: #f61947;
+    background-color: #1f9983;
+    border-color: #1f9983;
     color: white;
 }
 .btn-success {
-    background-color: #f61947;
-    border-color: #f61947;
+    background-color: #1f9983;
+    border-color: #1f9983;
     color: white;
 }
 .text-danger {
-    color: #f61947;
+    color: #1f9983;
     position: absolute;
     width: 100%;
     text-align: center;
 }
 .text-success {
-    color: #f61947;;
+    color: #1f9983;;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -2563,7 +2564,7 @@ section {
     margin-top: 0px;
     text-align: center;
     border-radius: 155px;
-    color: #f61947;
+    color: #1f9983;
 }
 .contact-row{
     margin-top: 0px;
@@ -2588,17 +2589,17 @@ section {
 }
 .map {
     width:100%;
-    height:600px;	
+    height:600px;
 }
 
 .map-wrap {
-    position:relative; 
+    position:relative;
 }
 
 .overlay-map {
     width:100%;
     height: 100%;
-    position:absolute; 
+    position:absolute;
     top:0;
     z-index: 11;
 }
@@ -2609,7 +2610,7 @@ section {
     margin-top: 80px;
 }
 .copyright-details {
-    background-color: #f61947;
+    background-color: #1f9983;
     margin-top: 0px;
 }
 .copyright h3 {
@@ -2803,7 +2804,7 @@ section {
         margin-bottom: 0%;
     }
     .navbar-default .navbar-toggle .icon-bar {
-        background-color: #f61947;
+        background-color: #1f9983;
     }
     .about-details {
         margin: 0px 15px;
@@ -2942,12 +2943,12 @@ section {
         background: none;
         color: white;
         position: relative;
-        border: 1px solid #f61947;
+        border: 1px solid #1f9983;
         padding: 9px 9px;
         font-size: 16px;
         position: relative;
         z-index: 111;
-        background-color: #f61947;
+        background-color: #1f9983;
     }
     .second {
         margin-left: 4px;
@@ -3046,7 +3047,7 @@ section {
         -webkit-transition: .4s;
         -moz-transition: .4s;
         -ms-transition: .4s;
-        background-color: #f61947;
+        background-color: #1f9983;
         padding: 3px 9px;
     }
     .item blockquote p {
@@ -3132,7 +3133,7 @@ section {
         padding: 35px 0px;
         margin: 0 20px 30px;
         border-radius: 0 70px 0 70px;
-        border: 5px solid #f61947;
+        border: 5px solid #1f9983;
         border-left: none;
         border-right: none;
         text-align: center;
