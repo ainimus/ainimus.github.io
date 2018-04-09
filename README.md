@@ -1,4 +1,4 @@
-# Gzorax.github.io
+# AInimus
 
 ## Principe
 
@@ -21,3 +21,9 @@ Pour faire du random entre deux valeurs : <<print either("heads","tails")>>
 <[img] src="the URL of your image" width="500" height="300" alt="Two foxes">
 <video src="the URL of your video" width="640" height="480"></video>
 <audio src="the URL of your sound effect" autoplay>
+
+
+
+
+
+https://twinery.org/wiki/stylesheet
