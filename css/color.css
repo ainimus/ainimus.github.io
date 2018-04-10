@@ -35,6 +35,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     height: 100%;
     background-color: transparent;
+    text-align: justify;
 }
 @font-face {
     font-family: 'Glyphicons Halflings';
@@ -776,8 +777,8 @@ section:nth-of-type(2){background:black;height:1600px;}
     font-size: 16px;
     color: #363636;
     letter-spacing: 1px;
-    line-height: 23px;
-    margin-bottom: 25px;
+    line-height: 28px;
+    margin-bottom: 10px;
     margin-top: 18px;
     position: relative;
     z-index: 111;
