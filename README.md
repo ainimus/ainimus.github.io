@@ -23,7 +23,6 @@ Pour faire du random entre deux valeurs : <<print either("heads","tails")>>
 <audio src="the URL of your sound effect" autoplay>
 
 
-
-
-
 https://twinery.org/wiki/stylesheet
+
+Pour ajouter du contenus à la sidebar, créer un passage nommé "StoryCaption"
