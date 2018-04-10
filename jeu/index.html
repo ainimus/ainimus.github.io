@@ -103,6 +103,12 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
 	<div id="store-area" hidden><tw-storydata name="Une main tendue" startnode="2" creator="Twine" creator-version="2.2.1" ifid="73E60789-7ADF-4FEA-B204-B1F3AF12716F" zoom="0.6" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+body {
+  font-size: 1.3em;
+  font-family: Space Mono, monospace;
+  color: white;
+}
+
 /* Typed.js text (and cursor) styling. */
 .typed, .typed-cursor {
 	font-family: Space Mono, monospace;
@@ -167,6 +173,8 @@ a {
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! typed.js integration module for SugarCube */
 !function(){"use strict";function getInlineOptions(classNames){var options={},typedRe=/^typed(?:-(\w+))+\b$/,parseRe=/-(speed|delay)(\d+)\b/g,match=void 0;if("typed"!==classNames)for(var classOpts=classNames.toLowerCase().split(/\s+/),i=0;i<classOpts.length;++i)if(typedRe.test(classOpts[i])){for(;null!==(match=parseRe.exec(classOpts[i]));)switch(match[1]){case"speed":options.typeSpeed=Number(match[2]);break;case"delay":options.startDelay=Number(match[2])}break}return options}function typedCallbackFactory(el,callback){return function(){var $outer=jQuery(el),$inner=jQuery('<div class="typedjs-text-wrapper" style="display:block;position:absolute;left:0;top:0;"><span class="typed"></span></div>'),$source=$outer.children('[class|="typed"]'),options=jQuery.extend({strings:["^0 "+$source.html()],typeSpeed:40,startDelay:400,onComplete:function(){$inner.children(".typed-cursor").remove(),callback()},preStringTyped:function(){jQuery.event.trigger(":typedstart")},onStringTyped:function(){jQuery.event.trigger(":typedstop")}},getInlineOptions($source.attr("class")));$outer.append($inner),new Typed($inner.children()[0],options)}}postrender[":typedSetupHandler"]=function(content){jQuery(content).find('[class|="typed"]').addClass("typed").css("visibility","hidden").wrap('<div class="typedjs-outer-wrapper" style="display:block;position:relative;"></div>')},postdisplay[":typedAnimationHandler"]=function(){var $elements=jQuery("#passages .typedjs-outer-wrapper");if(0!==$elements.length){for(var callback=function(){jQuery.event.trigger(":typedcomplete")},i=$elements.length-1;i>=0;--i)callback=typedCallbackFactory($elements[i],callback);callback()}}}();
 !function(){
@@ -192,9 +200,11 @@ a {
 Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accélérée et l&#39;intelligence artificielle a prise une place dominante dans la société. De nombreuses tâches et métiers ont pu être automatisés pour nous faciliter la vie. Cependant, l&#39;humain a pris de moins en moins d&#39;importance dans la société. Un équilibre fut rompu, de nombreux emplois ont disparu, entraînant un taux important de chômage causant  une précarité sans précédent dans la société. La population a été poussée à agir et à fermement réglementer l&#39;usage des intelligences artificielles dans les domaines professionnels. Aujourd&#39;hui, l&#39;utilisation d&#39;une intelligence artificielle dans le milieu professionnel est fortement réprimée dans la société. Dans ce contexte, vous êtes Peter Smithee, développeuse/codeur de renommée. Vous avez notamment participé à la démocratisation des I.A. Un beau jour, au détour d&#39;une rue, vous croisez un ami d&#39;enfance qui semble perturbé.
 &lt;/div&gt;
 
-[[Ne pas lui offrir votre aide.]]
+[[Offrir votre aide]]
 
-[[Offrir votre aide.]]
+[[Ne pas lui offrir votre aide]]
+
+
 </tw-passagedata><tw-passagedata pid="2" name="Bienvenue dans AI.NIMUS" tags="Glitch" position="347,0" size="100,100">&lt;link href=&quot;https://fonts.googleapis.com/css?family=Space+Mono&quot; rel=&quot;stylesheet&quot;&gt;
 
 Bienvenue,
@@ -209,12 +219,12 @@ Les règles sont simples vous allez être confronté à plusieurs dilemmes sur d
 
 1) [[&quot;Une main tendue&quot;]]</tw-passagedata><tw-passagedata pid="4" name="Passer" tags="glitch" position="1647,2499" size="100,100">Re[[Jouer]]
 
-[[En savoir +?]] (liens et citations complémentaires)</tw-passagedata><tw-passagedata pid="5" name="Ne pas lui offrir votre aide." tags="glitch" position="1032,215" size="100,100">&lt;div class=typed-speed8&gt;
+[[En savoir +?]] (liens et citations complémentaires)</tw-passagedata><tw-passagedata pid="5" name="Ne pas lui offrir votre aide" tags="glitch" position="1032,215" size="100,100">&lt;div class=typed-speed8&gt;
 Vous n&#39;avez pas de temps à perdre avec les problèmes des autres...
 Vous prenez congé de votre ami en utilisant une excuse générique, et vous continuez votre chemin, vous concentrant sur vos problèmes.
 &lt;/div&gt;
 
-[[Vous rentrez chez vous]]</tw-passagedata><tw-passagedata pid="6" name="Offrir votre aide." tags="glitch" position="1480,104" size="100,100">&lt;div class = typed-speed8&gt;Vous l&#39;invitez au café pour tenter d&#39;en savoir plus sur ces problèmes. Vous ne voulez pas laisser un ami proche  sans assistance. &lt;/div&gt;
+[[Vous rentrez chez vous]]</tw-passagedata><tw-passagedata pid="6" name="Offrir votre aide" tags="glitch" position="1480,104" size="100,100">&lt;div class = typed-speed8&gt;Vous l&#39;invitez au café pour tenter d&#39;en savoir plus sur ces problèmes. Vous ne voulez pas laisser un ami proche  sans assistance. &lt;/div&gt;
 
 [[Aller au café]] </tw-passagedata><tw-passagedata pid="7" name="Vous rentrez chez vous" tags="glitch" position="1026.3333333333335,398.3333333333333" size="100,100">&lt;div class= typed-speed6&gt;Vous rentrez chez vous et vous repensez à la rencontre avec votre ami... Un ami d&#39;enfance que vous avez laissé sans aide, que vous avez repoussé sans vergogne.
 Tous ces bons moments passés ensemble, vous reviennent à l&#39;esprit.
