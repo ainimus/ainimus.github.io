@@ -77,7 +77,23 @@ body{
 
 /*============================================================== COLOR SCHEMES ==========================================================*/
 
+.histoire1 {
+  background-image: url(http://static.cdprojektred.com/thewitcher.com/media/wallpapers/witcher3/full/witcher3_en_wallpaper_the_witcher_3_wild_hunt_ciri_meditating_1920x1200_1446715311.png);
+  background-size: cover;
+  height: 800px;
+}
 
+.histoire1 h3 {
+  font-size: 122px;
+color: white;
+letter-spacing: 0px;
+font-weight: 900;
+margin-bottom: 60px;
+padding-top: 400px;
+font-weight: 900;
+line-height: 100px;
+text-align: center;
+}
 /* color box */
 .box {
     position:fixed;
@@ -778,7 +794,7 @@ section:nth-of-type(2){background:black;height:1600px;}
     color: #363636;
     letter-spacing: 1px;
     line-height: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 45px;
     margin-top: 18px;
     position: relative;
     z-index: 111;
