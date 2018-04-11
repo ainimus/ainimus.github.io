@@ -222,6 +222,7 @@ body {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! typed.js integration module for SugarCube */
 !function(){"use strict";function getInlineOptions(classNames){var options={},typedRe=/^typed(?:-(\w+))+\b$/,parseRe=/-(speed|delay)(\d+)\b/g,match=void 0;if("typed"!==classNames)for(var classOpts=classNames.toLowerCase().split(/\s+/),i=0;i<classOpts.length;++i)if(typedRe.test(classOpts[i])){for(;null!==(match=parseRe.exec(classOpts[i]));)switch(match[1]){case"speed":options.typeSpeed=Number(match[2]);break;case"delay":options.startDelay=Number(match[2])}break}return options}function typedCallbackFactory(el,callback){return function(){var $outer=jQuery(el),$inner=jQuery('<div class="typedjs-text-wrapper" style="display:block;position:absolute;left:0;top:0;"><span class="typed"></span></div>'),$source=$outer.children('[class|="typed"]'),options=jQuery.extend({strings:["^0 "+$source.html()],typeSpeed:40,startDelay:400,onComplete:function(){$inner.children(".typed-cursor").remove(),callback()},preStringTyped:function(){jQuery.event.trigger(":typedstart")},onStringTyped:function(){jQuery.event.trigger(":typedstop")}},getInlineOptions($source.attr("class")));$outer.append($inner),new Typed($inner.children()[0],options)}}postrender[":typedSetupHandler"]=function(content){jQuery(content).find('[class|="typed"]').addClass("typed").css("visibility","hidden").wrap('<div class="typedjs-outer-wrapper" style="display:block;position:relative;"></div>')},postdisplay[":typedAnimationHandler"]=function(){var $elements=jQuery("#passages .typedjs-outer-wrapper");if(0!==$elements.length){for(var callback=function(){jQuery.event.trigger(":typedcomplete")},i=$elements.length-1;i>=0;--i)callback=typedCallbackFactory($elements[i],callback);callback()}}}();
 !function(){
@@ -251,8 +252,9 @@ for (var i=0;i<elems.length;i+=1){
 
 
 
+
 </script><tw-tag name="vert" color="red"></tw-tag>,<tw-tag name="Pauvre" color="red"></tw-tag>,<tw-tag name="Riche" color="yellow"></tw-tag>,<tw-tag name="glitch" color="green"></tw-tag>,<tw-tag name="Moyenne" color="blue"></tw-tag><tw-passagedata pid="1" name="Jouer" tags="glitch" position="1231,76" size="100,100">&lt;div class= typed-speed8&gt;
-Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accélérée et l&#39;intelligence artificielle a prise une place dominante dans la société. De nombreuses tâches et métiers ont pu être automatisés pour nous faciliter la vie. Cependant, l&#39;humain a pris de moins en moins d&#39;importance dans la société. Un équilibre fut rompu, de nombreux emplois ont disparu, entraînant un taux important de chômage causant  une précarité sans précédent dans la société. La population a été poussée à agir et à fermement réglementer l&#39;usage des intelligences artificielles dans les domaines professionnels. Aujourd&#39;hui, l&#39;utilisation d&#39;une intelligence artificielle dans le milieu professionnel est fortement réprimée dans la société. Dans ce contexte, vous êtes Peter Smithee, développeuse/codeur de renommée. Vous avez notamment participé à la démocratisation des I.A. Un beau jour, au détour d&#39;une rue, vous croisez un ami d&#39;enfance qui semble perturbé.
+Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accélérée et l&#39;intelligence artificielle a prise une place dominante dans la société. De nombreuses tâches et métiers ont pu être automatisés pour nous faciliter la vie. Cependant, l&#39;humain a pris de moins en moins d&#39;importance dans la société. Un équilibre fut rompu, de nombreux emplois ont disparu, entraînant un taux important de chômage causant  une précarité sans précédent dans la société. La population a été poussée à agir et à fermement réglementer l&#39;usage des intelligences artificielles dans les domaines professionnels. Aujourd&#39;hui, l&#39;utilisation d&#39;une intelligence artificielle dans le milieu professionnel est fortement réprimée dans la société. Dans ce contexte, vous êtes Peter Smithee, développeur de renommée. Vous avez notamment participé à la démocratisation des I.A. Un beau jour, au détour d&#39;une rue, vous croisez un ami d&#39;enfance qui semble perturbé.
 &lt;/div&gt;
 
 [[Ne pas lui offrir votre aide.]]
@@ -280,7 +282,7 @@ Vous n&#39;avez pas de temps à perdre avec les problèmes des autres...
 Vous prenez congé de votre ami en utilisant une excuse générique, et vous continuez votre chemin, vous concentrant sur vos problèmes.
 &lt;/div&gt;
 
-[[Vous rentrez chez vous]]</tw-passagedata><tw-passagedata pid="5" name="Offrir votre aide." tags="glitch" position="1485,142.33333333333334" size="100,100">&lt;div class = typed-speed8&gt;Vous l&#39;invitez au café pour tenter d&#39;en savoir plus sur ces problèmes. Vous ne voulez pas laisser un ami proche  sans assistance. &lt;/div&gt;
+[[Vous rentrez chez vous]]</tw-passagedata><tw-passagedata pid="5" name="Offrir votre aide." tags="glitch" position="1485,142" size="100,100">&lt;div class = typed-speed8&gt;Vous l&#39;invitez au café pour tenter d&#39;en savoir plus sur ces problèmes. Vous ne voulez pas laisser un ami proche  sans assistance. &lt;/div&gt;
 
 [[Aller au café]] </tw-passagedata><tw-passagedata pid="6" name="Vous rentrez chez vous" tags="glitch" position="1031,393" size="100,100">&lt;div class= typed-speed6&gt;Vous rentrez chez vous et vous repensez à la rencontre avec votre ami... Un ami d&#39;enfance que vous avez laissé sans aide, que vous avez repoussé sans vergogne.
 Tous ces bons moments passés ensemble, vous reviennent à l&#39;esprit.
@@ -295,7 +297,7 @@ Il vous donne rendez-vous dans un café.
 
 [[Aller au café]]
 
-</tw-passagedata><tw-passagedata pid="8" name="Aller au café" tags="glitch" position="1566.6666666666667,370.3333333333333" size="100,100">&lt;div class=typed-speed8&gt;Une fois là bas il vous raconte qu&#39;il est très en retard dans la rédaction de sa thèse.
+</tw-passagedata><tw-passagedata pid="8" name="Aller au café" tags="glitch" position="1566,370" size="100,100">&lt;div class=typed-speed8&gt;Une fois là bas il vous raconte qu&#39;il est très en retard dans la rédaction de sa thèse.
 Vous discutez encore avec lui et vous tentez de l&#39;encourager.
 Vous ne pouvez en aucun cas l&#39;aider: vous ne maîtrisez pas du tout son domaine d&#39;expertise, la biologie marine.
 Cependant une idée vous vient... Pourquoi ne pas recourir à une Intelligence Artificielle pour écrire les parties manquantes dans ses recherches ?
@@ -340,7 +342,7 @@ Votre métier vous permet de gagner votre vie confortablement, ainsi vous propos
 Vous terminez vos cafés, puis après avoir souhaité bonne chance, vous décidez de prendre congé de votre ami... Vous ne pouviez pas l&#39;aider de toute manières... vous rentrez chez vous et esperez que tout se passera bien pour lui.
 &lt;/div&gt;
 [[Finir]]
-</tw-passagedata><tw-passagedata pid="15" name="Finir" tags="glitch Pauvre" position="349.6666666666667,585" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="15" name="Finir" tags="glitch Pauvre" position="349,585" size="100,100">&lt;div class=typed-speed6&gt;
 Après avoir rencontré votre ami, et l&#39;avoir accompagné au café,
 
 vous décidez finalement de ne pas l&#39;aider.
@@ -356,7 +358,7 @@ De retour chez vous, vous vous sentez pris d&#39;incertitude: êtes vous prêt �
 [[Continuer quand même]]
 
 [[Ne pas trahir sa confiance]]
-</tw-passagedata><tw-passagedata pid="17" name="Lui dire" tags="glitch" position="2137,296.3333333333333" size="100,100">&lt;div class=typed-speed8&gt;
+</tw-passagedata><tw-passagedata pid="17" name="Lui dire" tags="glitch" position="2137,296" size="100,100">&lt;div class=typed-speed8&gt;
 Vous décidez d&#39;appeler votre ami... Vous lui expliquez la situation... Malgré son apparente déception, votre ami se montre raisonnable et comprend ce que vous lui expliquez.
 &lt;/div&gt;
 
@@ -370,7 +372,7 @@ Pas le temps de relire, votre ami est dans l&#39;urgence et vous devez envoyer r
 Vous apprenez que votre ami s&#39;est débrouillé sans vous, puisqu&#39;il est maintenant docteur en biologie marine...
 &lt;/div&gt;
 
-[[Terminer]]</tw-passagedata><tw-passagedata pid="20" name="Terminer" tags="glitch Moyenne" position="2947.6666666666665,166.33333333333331" size="100,100">&lt;div class=typed-speed6&gt;
+[[Terminer]]</tw-passagedata><tw-passagedata pid="20" name="Terminer" tags="glitch Moyenne" position="2947,166" size="100,100">&lt;div class=typed-speed6&gt;
 Après avoir rencontré votre ami, et l&#39;avoir accompagné au café,
 
 vous avez décider de l&#39;aider.
@@ -381,7 +383,7 @@ Qu&#39;aurait-il pu se passer si vous ne l&#39;aviez pas fait ?
 &lt;/div&gt;
 
 [[Au débat]]
-</tw-passagedata><tw-passagedata pid="21" name="Au débat" tags="glitch" position="1620.6666666666667,1160" size="100,100">[[Passer]]
+</tw-passagedata><tw-passagedata pid="21" name="Au débat" tags="glitch" position="1620,1160" size="100,100">[[Passer]]
 </tw-passagedata><tw-passagedata pid="22" name="Finalement" tags="glitch Pauvre" position="553,1151" size="100,100">&lt;div class=typed-speed6&gt;
 Après avoir rencontré votre ami, et l&#39;avoir accompagné au café,
 
@@ -436,7 +438,7 @@ Vous vous donnez du mal sur cette lettre de motivation, et vous en êtes fiers.
 Votre ami sera surement pris, et ça vous permettra de vous racheter.
 &lt;/div&gt;
 
-[[Au débat]]</tw-passagedata><tw-passagedata pid="30" name="Cependant..." tags="glitch" position="3133.3333333333335,1307.3333333333335" size="100,100">&lt;div class=typed-speed6&gt;
+[[Au débat]]</tw-passagedata><tw-passagedata pid="30" name="Cependant..." tags="glitch" position="3133,1307" size="100,100">&lt;div class=typed-speed6&gt;
 Quelques mois plus tard, votre ami est appelé a comparaitre au tribunal pour fraude et mauvais usage d&#39;intelligence Artificielle.
 Il vous appelle, paniqué :
 &quot;Peter, est ce que tu as quelque chose à voir dans cette affaire ? &quot;
@@ -465,7 +467,7 @@ Vous avez finalement avoué vos erreur.
 Avec un peu de chance, les conséquences ne seront pas trop dramatiques ...
 &lt;/div&gt;
 
-[[Au débat]]</tw-passagedata><tw-passagedata pid="32" name="Mentir" tags="glitch Riche" position="3543.3333333333335,1752.6666666666667" size="100,100">&lt;div class=typed-speed8&gt;&quot;je n&#39;ai rien avoir avec ça&quot; vous répondez, d&#39;un ton froid et sans appel.
+[[Au débat]]</tw-passagedata><tw-passagedata pid="32" name="Mentir" tags="glitch Riche" position="3543,1752" size="100,100">&lt;div class=typed-speed8&gt;&quot;je n&#39;ai rien avoir avec ça&quot; vous répondez, d&#39;un ton froid et sans appel.
 Votre ami est contraint de vous croire... Mais il restera toujours au fond de lui ce doute, que vous avez semé en le trahissant dans un moment difficile.
 Après l&#39;avoir accompagné dans ce café,
 Avoir parlé avec lui longuement,
