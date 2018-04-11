@@ -23,7 +23,42 @@
 
 
 
+* { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 100%;  }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+
+
+.blanc {
+  background-color: white;
+  z-index: 4;
+}
 html{
     position: relative;
     height: 100%;

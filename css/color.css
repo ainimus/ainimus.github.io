@@ -341,7 +341,7 @@ text-align: center;
 #particles-js{
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: transparent;
   /*  background: url(../img/img1.jpg) 50% 0 no-repeat fixed; */
     background-size: cover;
     background-position: 50% 50%;
