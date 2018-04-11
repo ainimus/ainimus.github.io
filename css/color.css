@@ -411,8 +411,10 @@ text-align: center;
     text-decoration: none;
     color: white;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-size: 15px;
+    font-size: 40px;
     border: 2px solid white;
+    text-align: center;
+    vertical-align: middle;
 }
 
 /* Bounce To Right */
@@ -449,6 +451,8 @@ text-align: center;
     transition-duration: 0.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
+    vertical-align: middle;
+    text-align: center;
 }
 .hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
     color: white;
@@ -795,7 +799,7 @@ section:nth-of-type(2){background:black;height:1600px;}
     letter-spacing: 1px;
     line-height: 28px;
     margin-bottom: 45px;
-    margin-top: 18px;
+    margin-top: -57px;
     position: relative;
     z-index: 111;
 }
