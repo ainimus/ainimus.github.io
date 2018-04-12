@@ -62,7 +62,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 /*
  * jQuery throttle / debounce - v1.1 - 3/7/2010
  * http://benalman.com/projects/jquery-throttle-debounce-plugin/
- * 
+ *
  * Copyright (c) 2010 "Cowboy" Ben Alman
  * Dual licensed under the MIT and GPL licenses.
  * http://benalman.com/about/license/
@@ -143,7 +143,7 @@ body.glitch {
   background-size: cover; /* maybe contain, based on the image and goals */
 }
 
-.link-internal {
+.link-internal, .passer{
   	padding: 15px;
   	background-color: rgba(0, 0, 0, 0.35);
   	display: inline-block;
@@ -195,15 +195,28 @@ body.glitch {
 	animation: fadein 1s ;
 }
 
-.link-internal:hover {
+.link-internal:hover, .passer:hover {
     text-decoration: none;
     border: solid 1px #1f9983;
   	box-shadow: 0 0 45px #1f9983;
-  
+
+}
+
+.passer {
+	color: #1f9983;
+	float: right;
+	cursor: pointer;
+}
+
+.passer:hover {
+    text-decoration: none;
+    border: solid 1px #1f9983;
+  	box-shadow: 0 0 50px #1f9983;
+
 }
 
 .lien {
-  
+
 }
 
 a {
@@ -221,7 +234,7 @@ body {
 }
 
 #ui-bar {
- left: -120em; 
+ left: -120em;
 }
 
 #story {
@@ -270,6 +283,31 @@ for (var i=0;i<elems.length;i+=1){
 });
 
 
+$(document.body).on('click', '.passer' ,function(){
+
+
+	var etape1 = $(this).siblings().find('span.typed').hide();
+	var etape2 = $(this).siblings().find('div.typed').css("visibility", "visible");
+	var etape3 = $(this).parent().find('.link-internal').css("display", "inline-block");
+	$('.typed-cursor').hide();
+	console.log(etape2);
+	console.log(etape3);
+	// $('span.typed').hide();
+	// $('div.typed').css("visibility", "visible");
+	// $('.link-internal').css("display", "inline-block");
+});
+
+$(document.body).on('click', '.link-internal' ,function(){
+	var etape1 = $(this).siblings().find('span.typed').show();
+	var etape2 = $(this).siblings().find('div.typed').css("visibility", "hidden");
+	var etape3 = $(this).parent().find('.link-internal').css("display", "none");
+	console.log(etape2);
+	console.log(etape3);
+	// $('span.typed').hide();
+	// $('div.typed').css("visibility", "visible");
+	// $('.link-internal').css("display", "inline-block");
+});
+
 
 document.body.dataset.tilt="";
 document.body.dataset.tiltMax="2.5";
@@ -277,6 +315,7 @@ document.body.dataset.tiltMax="2.5";
 Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accélérée et l&#39;intelligence artificielle a prise une place dominante dans la société. De nombreuses tâches et métiers ont pu être automatisés pour nous faciliter la vie. Cependant, l&#39;humain a pris de moins en moins d&#39;importance dans la société. Un équilibre fut rompu, de nombreux emplois ont disparu, entraînant un taux important de chômage causant  une précarité sans précédent dans la société. La population a été poussée à agir et à fermement réglementer l&#39;usage des intelligences artificielles dans les domaines professionnels. Aujourd&#39;hui, l&#39;utilisation d&#39;une intelligence artificielle dans le milieu professionnel est fortement réprimée dans la société. Dans ce contexte, vous êtes Peter Smithee, développeur de renom. Vous avez notamment participé à la démocratisation des I.A. Un beau jour, au détour d&#39;une rue, vous croisez un ami d&#39;enfance qui semble perturbé.
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Offrir votre aide.]]
 
@@ -289,29 +328,35 @@ Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accél
 
 Bienvenue,
 
-Les règles sont simples vous allez être confronté à plusieurs dilemmes sur différents thèmes philosophiques. 
+Les règles sont simples vous allez être confronté à plusieurs dilemmes sur différents thèmes philosophiques.
 
-A chaque histoire des choix s’offriront à vous, vous voterez  pour la solution que vous trouvez la plus  pertinente. 
+A chaque histoire des choix s’offriront à vous, vous voterez  pour la solution que vous trouvez la plus  pertinente.
 
 A la fin du jeu vous pourrez débattre autour des thèmes abordés et poursuivre vos discussions grâce à des citations.
 
             Prêt ?
-			
+
 			&lt;span class=&quot;lienVisible&quot;&gt;[[Jouer]]&lt;/span&gt;
 </tw-passagedata><tw-passagedata pid="3" name="Ne pas lui offrir votre aide." tags="glitch" position="1035,223" size="100,100">&lt;div class=typed-speed8&gt;
 Vous n&#39;avez pas de temps à perdre avec les problèmes des autres...
 Vous prenez congé de votre ami en utilisant une excuse générique, et vous continuez votre chemin, vous concentrant sur vos problèmes.
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Vous rentrez chez vous]]
 </tw-passagedata><tw-passagedata pid="4" name="Offrir votre aide." tags="glitch" position="1485,142" size="100,100">&lt;div class = typed-speed8&gt;Vous l&#39;invitez au café pour tenter d&#39;en savoir plus sur ces problèmes. Vous ne voulez pas laisser un ami proche  sans assistance. &lt;/div&gt;
 
-[[Aller au café]] 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
+[[Aller au café]]
 
 
 </tw-passagedata><tw-passagedata pid="5" name="Vous rentrez chez vous" tags="glitch" position="1031,393" size="100,100">&lt;div class= typed-speed6&gt;Vous rentrez chez vous et vous repensez à la rencontre avec votre ami... Un ami d&#39;enfance que vous avez laissé sans aide, que vous avez repoussé sans vergogne.
 Tous ces bons moments passés ensemble, vous reviennent à l&#39;esprit.
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Le rappeller]]
 
@@ -321,6 +366,8 @@ Tous ces bons moments passés ensemble, vous reviennent à l&#39;esprit.
 Il vous donne rendez-vous dans un café.
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Aller au café]]
 
 
@@ -329,6 +376,8 @@ Vous discutez encore avec lui et vous tentez de l&#39;encourager.
 Vous ne pouvez en aucun cas l&#39;aider: vous ne maîtrisez pas du tout son domaine d&#39;expertise, la biologie marine.
 Cependant une idée vous vient... Pourquoi ne pas recourir à une Intelligence Artificielle pour écrire les parties manquantes dans ses recherches ?
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Continuer à l&#39;encourager]]
 
@@ -343,12 +392,17 @@ Au fur et à mesure de la discussion, vient sur le tapis le problème de l&#39;a
 Il vous reste cependant toujours la possibilité de l&#39;aider à écrire...
 
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[L&#39;aider financièrement]]
 
 [[Accepter de l&#39;aider à la rédaction]]
 
 </tw-passagedata><tw-passagedata pid="9" name="Lui parler des IA" tags="glitch" position="2137,570" size="100,100">&lt;div class= typed-speed8&gt;Quand vous évoquez ces robots, votre ami devient nerveux et vous fait part de sa réticence à l&#39;encontre des intelligences artificielles... D&#39;ailleurs, il n&#39;en possède pas... Il vous fait aussi promettre de l&#39;aider normalement, sans utiliser d&#39;intelligences artificielles.
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Accepter de l&#39;aider à la rédaction]]
 
@@ -357,6 +411,8 @@ Il vous reste cependant toujours la possibilité de l&#39;aider à écrire...
 Allez vous dire à votre ami que vous n&#39;avez pas réussi à l&#39;aider ?
 
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 [[Lui dire]]
 
 [[Ne rien dire]]
@@ -364,13 +420,16 @@ Allez vous dire à votre ami que vous n&#39;avez pas réussi à l&#39;aider ?
 Votre métier vous permet de gagner votre vie confortablement, ainsi vous proposez à votre ami une aide financière qui lui permettrait de subvernir à ses besoins le temps qu&#39;il termine sa thèse.
 
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Le temps passe]]
 
 </tw-passagedata><tw-passagedata pid="12" name="Le temps passe" tags="glitch" position="319,875" size="100,100">&lt;div class=typed-speed6&gt;Le temps passe et peu de temps plus tard, votre ami vous rappelle pour vous dire qu&#39;il a passé sa thèse avec brio...
 
 Mais maintenant vous vous demandez si vous l&#39;avez bel et bien aidé...
 
-Peut-être que si 
+Peut-être que si
 
 @@error error error code:68 74 74 70 73 3A 2F 2F 67 77 65 6E 64 61 6C 6A 75 64 69 63 2E 63 6F 6D 2F 62 69 6E 2E 70 6E 67 @@
 
@@ -382,23 +441,30 @@ Peut-être que si
 
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Recommencer]]
 </tw-passagedata><tw-passagedata pid="13" name="Ne rien faire" tags="glitch" position="595,428" size="100,100">&lt;div class=typed-speed6&gt;
 Non, vous ne lui devez rien...  Vous ne pouviez pas l&#39;aider de toute manières... vous rentrez chez vous et esperez que tout se passera bien pour lui.
 
-Mais .. @@error error error 
+Mais .. @@error error error
 code : 68 74 74 70 73 3A 2F 2F 67 77 65 6E 64 61 6C 6A 75 64 69 63 2E 63 6F 6D 2F 62 69 6E 2E 70 6E 67@@
 
 @@ @erreur de rapport@
 @transmission terminée@
 @desynchronisation en cours@ @@
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Recommencer]]
 
 
 </tw-passagedata><tw-passagedata pid="14" name="Utiliser l&#39;IA quand même" tags="glitch" position="2614,779" size="100,100">&lt;div class=typed-speed6&gt;
 De retour chez vous, vous vous sentez pris d&#39;incertitude: êtes vous prêt à trahir la confiance de votre ami et risquer de vous mettre tous les deux en danger? Le jeu en vaut il la chandelle?
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Continuer quand même]]
 
@@ -408,6 +474,8 @@ De retour chez vous, vous vous sentez pris d&#39;incertitude: êtes vous prêt �
 Vous décidez d&#39;appeler votre ami... Vous lui expliquez la situation... Malgré son apparente déception, votre ami se montre raisonnable et comprend ce que vous lui expliquez.
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Pour finir]]
 
 </tw-passagedata><tw-passagedata pid="16" name="Ne rien dire" tags="glitch" position="1976,1103" size="100,100">&lt;div class=typed-speed8&gt;
@@ -415,11 +483,15 @@ Vous décidez tout de même de vous mettre au travail. Vous prenez du temps et v
 Pas le temps de relire, votre ami est dans l&#39;urgence et vous devez envoyer rapidement le dossier à l&#39;université.
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Les années passent]]
 
 </tw-passagedata><tw-passagedata pid="17" name="Pour finir" tags="glitch" position="2379,283" size="100,100">&lt;div class=typed-speed8&gt;Votre égo et votre fierté sont piqués et vous vous en voulez de ne pas avoir pu aider votre ami... Après tout vous auriez tout aussi bien fait de ne pas lui proposer d&#39;aide.
 Vous apprenez que votre ami s&#39;est débrouillé sans vous, puisqu&#39;il est maintenant docteur en biologie marine...
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Terminer]]
 </tw-passagedata><tw-passagedata pid="18" name="Terminer" tags="glitch Moyenne" position="2945,166" size="100,100">&lt;div class=typed-speed6&gt;
@@ -431,7 +503,7 @@ Malheureusement vous n&#39;y etes pas arrivé..
 Mais vous avez eu l&#39;honneteté de l&#39;avouer.
 Qu&#39;aurait-il pu se passer si vous ne l&#39;aviez pas fait ?
 
-@@error error error 
+@@error error error
 code: 68 74 74 70 73 3A 2F 2F 67 77 65 6E 64 61 6C 6A 75 64 69 63 2E 63 6F 6D 2F 62 69 6E 2E 70 6E 67@@
 
 @@ @erreur de rapport@
@@ -442,6 +514,8 @@ code: 68 74 74 70 73 3A 2F 2F 67 77 65 6E 64 61 6C 6A 75 64 69 63 2E 63 6F 6D 2F
 
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Au débat]]
 </tw-passagedata><tw-passagedata pid="19" name="Au débat" tags="glitch" position="1166,1124" size="100,100">Quelques citations pour vous aider dans le débat
 
@@ -449,7 +523,7 @@ code: 68 74 74 70 73 3A 2F 2F 67 77 65 6E 64 61 6C 6A 75 64 69 63 2E 63 6F 6D 2F
 
 
 !!!“La technique nous écarterait-elle de notre passé, au point de nous le rendre inintelligible ?”
-Alexis Philonenko → livre inconnu 
+Alexis Philonenko → livre inconnu
 
 !!!&quot;Face au travail l&#39;homme peut avoir deux attitudes : le faire ou le faire faire.&quot;
 Grégoire Lacroix → On ne meurt pas d’une overdose de rêve (2013)
@@ -466,11 +540,13 @@ Jean Paul Sartre → Les mains sales
 !!!&quot;Clones, robots, cyborgs, organes artificiels... : la science-fiction d&#39;hier devient notre réalité et l&#39;on se demande déjà comment préserver une définition de l&#39;humain.&quot;
  Jean-Michel Besnier → Demain les Posthumains
 
-Terminer le débat et &lt;span class=&quot;lienVisible&quot;&gt;[[Jouer]] &lt;/span&gt; une autre fois ? 
+Terminer le débat et &lt;span class=&quot;lienVisible&quot;&gt;[[Jouer]] &lt;/span&gt; une autre fois ?
 
 </tw-passagedata><tw-passagedata pid="20" name="Continuer quand même" tags="glitch" position="2797,947" size="100,100">&lt;div class=typed-speed8&gt;
 Vous donnez l&#39;ordre à votre assistant de lancer la tâche d&#39;écriture. Quelques heures plus tard, vous lisez ce que l&#39;ordinateur à écrit, et vous vous rendez-compte que le résultat est plus que satisfaisant...
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Vous donnez les textes à votre ami]]
 
@@ -478,30 +554,38 @@ Vous donnez l&#39;ordre à votre assistant de lancer la tâche d&#39;écriture. 
 Vous revenez sur vos mauvaises pensées, et vous vous résolvez à aider votre ami sans recourir à une l&#39;Intelligence Artificielle.
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Accepter de l&#39;aider à la rédaction]]
 </tw-passagedata><tw-passagedata pid="22" name="Vous donnez les textes à votre ami" tags="glitch" position="3195,877" size="100,100">&lt;div class=typed-speed6&gt;
-... Et dans un premier temps rien ne se passe. Votre ami trouve les écrits que vous lui avez donné de très bonne qualité. 
+... Et dans un premier temps rien ne se passe. Votre ami trouve les écrits que vous lui avez donné de très bonne qualité.
 Cependant au fond de vous, vous sentez que vous venez de faire une terrible erreur.
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Cependant...]]
 </tw-passagedata><tw-passagedata pid="23" name="Les années passent" tags="glitch" position="2316,1340" size="100,100">&lt;div class=typed-speed8&gt;
-Le temps passe, et comme vous l&#39;aviez prédit vos écrit ne sont pas bons, et faisaient véritablement tache dans la thèse de votre ami... 
+Le temps passe, et comme vous l&#39;aviez prédit vos écrit ne sont pas bons, et faisaient véritablement tache dans la thèse de votre ami...
 
-Il n&#39;a pas obtenu son doctorat, et une dispute houleuse à éclatée entre vous et lui... 
+Il n&#39;a pas obtenu son doctorat, et une dispute houleuse à éclatée entre vous et lui...
 
 Cette histoire a ruiné votre amitié et compromis les projets de carrière de votre ami.
 
 Peut être valait il mieux ne pas l&#39;aider du tout?
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Mais un jour...]]
 
 
 </tw-passagedata><tw-passagedata pid="24" name="Mais un jour..." tags="glitch" position="2561,1555" size="100,100">&lt;div class=typed-speed6&gt;
-... malgré son échec universitaire, votre ami revient vers vous. Il a de nouveau besoin de votre aide : l&#39;occasion de se rattraper se présente. 
+... malgré son échec universitaire, votre ami revient vers vous. Il a de nouveau besoin de votre aide : l&#39;occasion de se rattraper se présente.
 Un poste important vient de se libérer, il vous demande de l&#39;épauler pour la rédaction d&#39;une lettre de motivation. Qu&#39;allez-vous faire ?
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Refuser]]
 
@@ -515,13 +599,17 @@ Votre ami n&#39;auras pas sa place mais au moins ça ne sera pas de votre faute.
 Vous avez le sentiment de ne rien avoir à vous reprocher.
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Au débat]]
 
 </tw-passagedata><tw-passagedata pid="26" name="Tenter de l&#39;aider" tags="glitch Riche" position="2667,1771" size="100,100">&lt;div class=typed-speed6&gt;
-Vous vous donnez du mal sur cette lettre de motivation, et vous en êtes fier. 
+Vous vous donnez du mal sur cette lettre de motivation, et vous en êtes fier.
 
 Votre ami sera surement pris, et ça vous permettra de vous racheter.
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Au débat]]
 
@@ -529,10 +617,12 @@ Votre ami sera surement pris, et ça vous permettra de vous racheter.
 Quelques mois plus tard, votre ami est appelé a comparaitre au tribunal pour fraude et mauvais usage d&#39;intelligence Artificielle.
 Il vous appelle, paniqué :
 &quot;Peter, est ce que tu as quelque chose à voir dans cette affaire ? &quot;
-Vous saviez qu&#39;on finirait par savoir qu&#39;une IA était impliquée... 
+Vous saviez qu&#39;on finirait par savoir qu&#39;une IA était impliquée...
 
 Maintenant il faut que vous preniez vos responsabilités.
 &lt;/div&gt;
+
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Lui dire la vérité]]
 
@@ -556,6 +646,8 @@ Vous avez finalement avoué vos erreur.
 Avec un peu de chance, les conséquences ne seront pas trop dramatiques ...
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Au débat]]
 
 </tw-passagedata><tw-passagedata pid="29" name="Mentir" tags="glitch Riche" position="3543,1752" size="100,100">&lt;div class=typed-speed8&gt;&quot;je n&#39;ai rien avoir avec ça&quot; vous répondez, d&#39;un ton froid et sans appel.
@@ -568,19 +660,21 @@ En utilisant une IA dans le but de créer des parties de sa thèse.
 Et vous le trahissez une fois de plus lorsque vient le temps de porter vos choix..
 &lt;/div&gt;
 
+&lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
+
 [[Au débat]]
 </tw-passagedata><tw-passagedata pid="30" name="Recommencer" tags="glitch" position="346,264" size="100,100">&lt;link href=&quot;https://fonts.googleapis.com/css?family=Space+Mono&quot; rel=&quot;stylesheet&quot;&gt;
 
 Bienvenue,
 
-Les règles sont simples vous allez être confronté à plusieurs dilemmes sur différents thèmes philosophiques. 
+Les règles sont simples vous allez être confronté à plusieurs dilemmes sur différents thèmes philosophiques.
 
-A chaque histoire des choix s’offriront à vous, vous voterez  pour la solution que vous trouvez la plus  pertinente. 
+A chaque histoire des choix s’offriront à vous, vous voterez  pour la solution que vous trouvez la plus  pertinente.
 
 A la fin du jeu vous pourrez débattre autour des thèmes abordés et poursuivre vos discussions grâces aux liens et aux citations fournis.
 
             Prêt ?
-			
+
 &lt;span class=&quot;lienVisible&quot;&gt;[[Jouer]]&lt;/span&gt;
 </tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
