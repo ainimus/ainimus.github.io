@@ -11,7 +11,7 @@
 
 $('#video').YTPlayer({
     fitToBackground: true,
-    videoId: '0LX4i1NqxvI'
+    videoId: '8XJHCfI9M7U'
 });
 
 var pJS = function(tag_id, params){
