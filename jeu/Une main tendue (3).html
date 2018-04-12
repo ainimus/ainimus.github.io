@@ -257,13 +257,13 @@ body {
 }.call(window);
 
 
-/* Import the jQuery UI library. */
-importScripts("https://code.jquery.com/jquery-2.2.4.min.js");
+
+
 importScripts("https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js");
-importScripts("https://cdn.rawgit.com/pupunzi/jquery.mb.YTPlayer/master/dist/jquery.mb.YTPlayer.min.js");
-
-
-
+importScripts("https://cdn.rawgit.com/pupunzi/jquery.mb.YTPlayer/master/dist/jquery.mb.YTPlayer.js");
+jQuery(function(){
+      jQuery("#bgndVideo").YTPlayer();
+    });
 
 
 $(document).on(':typedcomplete', function () {
@@ -275,10 +275,6 @@ for (var i=0;i<elems.length;i+=1){
 
 document.body.dataset.tilt="";
 document.body.dataset.tiltMax="2.5";
-
-jQuery(function(){
-		 jQuery("#[playerID]").YTPlayer();
-	 });
 </script><tw-tag name="vert" color="red"></tw-tag>,<tw-tag name="Pauvre" color="red"></tw-tag>,<tw-tag name="Riche" color="yellow"></tw-tag>,<tw-tag name="glitch" color="green"></tw-tag>,<tw-tag name="Moyenne" color="blue"></tw-tag><tw-passagedata pid="1" name="Jouer" tags="glitch" position="1231,76" size="100,100">&lt;div class= typed-speed8&gt;
 Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accélérée et l&#39;intelligence artificielle a prise une place dominante dans la société. De nombreuses tâches et métiers ont pu être automatisés pour nous faciliter la vie. Cependant, l&#39;humain a pris de moins en moins d&#39;importance dans la société. Un équilibre fut rompu, de nombreux emplois ont disparu, entraînant un taux important de chômage causant  une précarité sans précédent dans la société. La population a été poussée à agir et à fermement réglementer l&#39;usage des intelligences artificielles dans les domaines professionnels. Aujourd&#39;hui, l&#39;utilisation d&#39;une intelligence artificielle dans le milieu professionnel est fortement réprimée dans la société. Dans ce contexte, vous êtes Peter Smithee, développeur de renom. Vous avez notamment participé à la démocratisation des I.A. Un beau jour, au détour d&#39;une rue, vous croisez un ami d&#39;enfance qui semble perturbé.
 &lt;/div&gt;
@@ -314,7 +310,8 @@ Vous prenez congé de votre ami en utilisant une excuse générique, et vous con
 
 [[Aller au café]] 
 
-&lt;div id=&quot;bgndVideo&quot; class=&quot;player&quot; data-property=&quot;{videoURL:&#39;http://youtu.be/BsekcY04xvQ&#39;,containment:&#39;body&#39;,autoPlay:true, mute:true, startAt:0, opacity:1}&quot;&gt;My video&lt;/div&gt;
+&lt;div id=&quot;bgndVideo&quot; class=&quot;player&quot; 
+     data-property=&quot;{videoURL:&#39;http://youtu.be/BsekcY04xvQ&#39;,containment:&#39;body&#39;,autoPlay:true, mute:true, startAt:0, opacity:1}&quot;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="5" name="Vous rentrez chez vous" tags="glitch" position="1031,393" size="100,100">&lt;div class= typed-speed6&gt;Vous rentrez chez vous et vous repensez à la rencontre avec votre ami... Un ami d&#39;enfance que vous avez laissé sans aide, que vous avez repoussé sans vergogne.
 Tous ces bons moments passés ensemble, vous reviennent à l&#39;esprit.
 &lt;/div&gt;
