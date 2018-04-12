@@ -211,7 +211,7 @@ a {
 }
 
 .lienVisible .link-internal {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 body {
@@ -225,13 +225,22 @@ body {
 }
 
 #story {
-  margin-left: 24px;
+  margin-left: 40%;
+  margin-right: 5%;
+}
+
+#video{
+ position: relative;
+ background: transparent;
 }
 
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! typed.js integration module for SugarCube */
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+/*! typed.js integration module for SugarCube */
 !function(){"use strict";function getInlineOptions(classNames){var options={},typedRe=/^typed(?:-(\w+))+\b$/,parseRe=/-(speed|delay)(\d+)\b/g,match=void 0;if("typed"!==classNames)for(var classOpts=classNames.toLowerCase().split(/\s+/),i=0;i<classOpts.length;++i)if(typedRe.test(classOpts[i])){for(;null!==(match=parseRe.exec(classOpts[i]));)switch(match[1]){case"speed":options.typeSpeed=Number(match[2]);break;case"delay":options.startDelay=Number(match[2])}break}return options}function typedCallbackFactory(el,callback){return function(){var $outer=jQuery(el),$inner=jQuery('<div class="typedjs-text-wrapper" style="display:block;position:absolute;left:0;top:0;"><span class="typed"></span></div>'),$source=$outer.children('[class|="typed"]'),options=jQuery.extend({strings:["^0 "+$source.html()],typeSpeed:40,startDelay:400,onComplete:function(){$inner.children(".typed-cursor").remove(),callback()},preStringTyped:function(){jQuery.event.trigger(":typedstart")},onStringTyped:function(){jQuery.event.trigger(":typedstop")}},getInlineOptions($source.attr("class")));$outer.append($inner),new Typed($inner.children()[0],options)}}postrender[":typedSetupHandler"]=function(content){jQuery(content).find('[class|="typed"]').addClass("typed").css("visibility","hidden").wrap('<div class="typedjs-outer-wrapper" style="display:block;position:relative;"></div>')},postdisplay[":typedAnimationHandler"]=function(){var $elements=jQuery("#passages .typedjs-outer-wrapper");if(0!==$elements.length){for(var callback=function(){jQuery.event.trigger(":typedcomplete")},i=$elements.length-1;i>=0;--i)callback=typedCallbackFactory($elements[i],callback);callback()}}}();
 !function(){
 /*!
@@ -249,21 +258,21 @@ body {
 
 
 
+
+importScripts("https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js");
+
+
 $(document).on(':typedcomplete', function () {
 	var elems = document.getElementsByClassName('link-internal');
 for (var i=0;i<elems.length;i+=1){
-	elems[i].style.display = "inline-block"; 
+	elems[i].style.display = "inline-block";
 }
 });
 
+
+
 document.body.dataset.tilt="";
 document.body.dataset.tiltMax="2.5";
-
-
-
-
-
-
 </script><tw-tag name="vert" color="red"></tw-tag>,<tw-tag name="Pauvre" color="red"></tw-tag>,<tw-tag name="Riche" color="yellow"></tw-tag>,<tw-tag name="glitch" color="green"></tw-tag>,<tw-tag name="Moyenne" color="blue"></tw-tag><tw-passagedata pid="1" name="Jouer" tags="glitch" position="1231,76" size="100,100">&lt;div class= typed-speed8&gt;
 Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accélérée et l&#39;intelligence artificielle a prise une place dominante dans la société. De nombreuses tâches et métiers ont pu être automatisés pour nous faciliter la vie. Cependant, l&#39;humain a pris de moins en moins d&#39;importance dans la société. Un équilibre fut rompu, de nombreux emplois ont disparu, entraînant un taux important de chômage causant  une précarité sans précédent dans la société. La population a été poussée à agir et à fermement réglementer l&#39;usage des intelligences artificielles dans les domaines professionnels. Aujourd&#39;hui, l&#39;utilisation d&#39;une intelligence artificielle dans le milieu professionnel est fortement réprimée dans la société. Dans ce contexte, vous êtes Peter Smithee, développeur de renom. Vous avez notamment participé à la démocratisation des I.A. Un beau jour, au détour d&#39;une rue, vous croisez un ami d&#39;enfance qui semble perturbé.
 &lt;/div&gt;
@@ -273,9 +282,8 @@ Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accél
 
 [[Ne pas lui offrir votre aide.]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;div id=&quot;video&quot;&gt;&lt;/div&gt;
 
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;
 
 </tw-passagedata><tw-passagedata pid="2" name="Bienvenue dans AI.NIMUS" tags="Glitch" position="347,0" size="100,100">&lt;link href=&quot;https://fonts.googleapis.com/css?family=Space+Mono&quot; rel=&quot;stylesheet&quot;&gt;
 
@@ -289,27 +297,19 @@ A la fin du jeu vous pourrez débattre autour des thèmes abordés et poursuivre
 
             Prêt ?
 			
-			&lt;span class=&quot;lienVisible&quot;&gt;[[Jouer]] &lt;/span&gt;
-
-
-			&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="3" name="Ne pas lui offrir votre aide." tags="glitch" position="1035,223" size="100,100">&lt;div class=typed-speed8&gt;
+			&lt;span class=&quot;lienVisible&quot;&gt;[[Jouer]]&lt;/span&gt;
+</tw-passagedata><tw-passagedata pid="3" name="Ne pas lui offrir votre aide." tags="glitch" position="1035,223" size="100,100">&lt;div class=typed-speed8&gt;
 Vous n&#39;avez pas de temps à perdre avec les problèmes des autres...
 Vous prenez congé de votre ami en utilisant une excuse générique, et vous continuez votre chemin, vous concentrant sur vos problèmes.
 &lt;/div&gt;
 
 [[Vous rentrez chez vous]]
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="4" name="Offrir votre aide." tags="glitch" position="1485,142" size="100,100">&lt;div class = typed-speed8&gt;Vous l&#39;invitez au café pour tenter d&#39;en savoir plus sur ces problèmes. Vous ne voulez pas laisser un ami proche  sans assistance. &lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="4" name="Offrir votre aide." tags="glitch" position="1485,142" size="100,100">&lt;div class = typed-speed8&gt;Vous l&#39;invitez au café pour tenter d&#39;en savoir plus sur ces problèmes. Vous ne voulez pas laisser un ami proche  sans assistance. &lt;/div&gt;
 
 [[Aller au café]] 
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="5" name="Vous rentrez chez vous" tags="glitch" position="1031,393" size="100,100">&lt;div class= typed-speed6&gt;Vous rentrez chez vous et vous repensez à la rencontre avec votre ami... Un ami d&#39;enfance que vous avez laissé sans aide, que vous avez repoussé sans vergogne.
+</tw-passagedata><tw-passagedata pid="5" name="Vous rentrez chez vous" tags="glitch" position="1031,393" size="100,100">&lt;div class= typed-speed6&gt;Vous rentrez chez vous et vous repensez à la rencontre avec votre ami... Un ami d&#39;enfance que vous avez laissé sans aide, que vous avez repoussé sans vergogne.
 Tous ces bons moments passés ensemble, vous reviennent à l&#39;esprit.
 &lt;/div&gt;
 
@@ -317,17 +317,13 @@ Tous ces bons moments passés ensemble, vous reviennent à l&#39;esprit.
 
 [[Ne rien faire]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="6" name="Le rappeller" tags="glitch" position="1211,415" size="100,100">&lt;div class=typed-speed6&gt;Vous décidez de finalement rapeller votre ami et de lui demander ce qu&#39;il ne va pas...
+</tw-passagedata><tw-passagedata pid="6" name="Le rappeller" tags="glitch" position="1211,415" size="100,100">&lt;div class=typed-speed6&gt;Vous décidez de finalement rapeller votre ami et de lui demander ce qu&#39;il ne va pas...
 Il vous donne rendez-vous dans un café.
 &lt;/div&gt;
 
 [[Aller au café]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;
 </tw-passagedata><tw-passagedata pid="7" name="Aller au café" tags="glitch" position="1566,370" size="100,100">&lt;div class=typed-speed8&gt;Une fois là bas il vous raconte qu&#39;il est très en retard dans la rédaction de sa thèse.
 Vous discutez encore avec lui et vous tentez de l&#39;encourager.
 Vous ne pouvez en aucun cas l&#39;aider: vous ne maîtrisez pas du tout son domaine d&#39;expertise, la biologie marine.
@@ -342,9 +338,6 @@ Cependant une idée vous vient... Pourquoi ne pas recourir à une Intelligence A
 
 [[Ne rien faire]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;
 </tw-passagedata><tw-passagedata pid="8" name="Continuer à l&#39;encourager" tags="glitch" position="1209,636" size="100,100">&lt;div class=typed-speed6&gt;
 Au fur et à mesure de la discussion, vient sur le tapis le problème de l&#39;argent... La motivation est présente chez votre ami, mais il n&#39;a tout simplement pas assez de temps et de moyens avec son travail pour se consacrer à sa thèse.
 Il vous reste cependant toujours la possibilité de l&#39;aider à écrire...
@@ -354,38 +347,26 @@ Il vous reste cependant toujours la possibilité de l&#39;aider à écrire...
 
 [[Accepter de l&#39;aider à la rédaction]]
 
-	&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;
 </tw-passagedata><tw-passagedata pid="9" name="Lui parler des IA" tags="glitch" position="2137,570" size="100,100">&lt;div class= typed-speed8&gt;Quand vous évoquez ces robots, votre ami devient nerveux et vous fait part de sa réticence à l&#39;encontre des intelligences artificielles... D&#39;ailleurs, il n&#39;en possède pas... Il vous fait aussi promettre de l&#39;aider normalement, sans utiliser d&#39;intelligences artificielles.
 &lt;/div&gt;
 
 [[Accepter de l&#39;aider à la rédaction]]
 
 [[Utiliser l&#39;IA quand même]]
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="10" name="Accepter de l&#39;aider à la rédaction" tags="glitch" position="1616,710" size="100,100">&lt;div class=typed-speed6&gt;Vous respectez scrupuleusement les consignes de votre ami, et vous tentez de rédiger du mieux que vous pouvez les passages manquant dans ses écrits. Cela fait bien longtemps que vous n&#39;avez rien écrit à part des lignes de codes, et la qualité s&#39;en fait sentir.
+</tw-passagedata><tw-passagedata pid="10" name="Accepter de l&#39;aider à la rédaction" tags="glitch" position="1616,710" size="100,100">&lt;div class=typed-speed6&gt;Vous respectez scrupuleusement les consignes de votre ami, et vous tentez de rédiger du mieux que vous pouvez les passages manquant dans ses écrits. Cela fait bien longtemps que vous n&#39;avez rien écrit à part des lignes de codes, et la qualité s&#39;en fait sentir.
 Allez vous dire à votre ami que vous n&#39;avez pas réussi à l&#39;aider ?
 
 &lt;/div&gt;
 [[Lui dire]]
 
 [[Ne rien dire]]
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="11" name="L&#39;aider financièrement" tags="glitch" position="511,884.6666666666666" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="11" name="L&#39;aider financièrement" tags="glitch" position="511,884" size="100,100">&lt;div class=typed-speed6&gt;
 Votre métier vous permet de gagner votre vie confortablement, ainsi vous proposez à votre ami une aide financière qui lui permettrait de subvernir à ses besoins le temps qu&#39;il termine sa thèse.
 
 &lt;/div&gt;
 [[Le temps passe]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="12" name="Le temps passe" tags="glitch" position="319.33333333333337,875.3333333333334" size="100,100">&lt;div class=typed-speed6&gt;Le temps passe et peu de temps plus tard, votre ami vous rappelle pour vous dire qu&#39;il a passé sa thèse avec brio...
+</tw-passagedata><tw-passagedata pid="12" name="Le temps passe" tags="glitch" position="319,875" size="100,100">&lt;div class=typed-speed6&gt;Le temps passe et peu de temps plus tard, votre ami vous rappelle pour vous dire qu&#39;il a passé sa thèse avec brio...
 
 Mais maintenant vous vous demandez si vous l&#39;avez bel et bien aidé...
 
@@ -402,10 +383,7 @@ Peut-être que si
 &lt;/div&gt;
 
 [[Recommencer]]
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="13" name="Ne rien faire" tags="glitch" position="595,428.33333333333337" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Ne rien faire" tags="glitch" position="595,428" size="100,100">&lt;div class=typed-speed6&gt;
 Non, vous ne lui devez rien...  Vous ne pouviez pas l&#39;aider de toute manières... vous rentrez chez vous et esperez que tout se passera bien pour lui.
 
 Mais .. @@error error error 
@@ -417,9 +395,7 @@ code : 68 74 74 70 73 3A 2F 2F 67 77 65 6E 64 61 6C 6A 75 64 69 63 2E 63 6F 6D 2
 &lt;/div&gt;
 [[Recommencer]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;
 </tw-passagedata><tw-passagedata pid="14" name="Utiliser l&#39;IA quand même" tags="glitch" position="2614,779" size="100,100">&lt;div class=typed-speed6&gt;
 De retour chez vous, vous vous sentez pris d&#39;incertitude: êtes vous prêt à trahir la confiance de votre ami et risquer de vous mettre tous les deux en danger? Le jeu en vaut il la chandelle?
 &lt;/div&gt;
@@ -428,36 +404,25 @@ De retour chez vous, vous vous sentez pris d&#39;incertitude: êtes vous prêt �
 
 [[Ne pas trahir sa confiance]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;
 </tw-passagedata><tw-passagedata pid="15" name="Lui dire" tags="glitch" position="2137,296" size="100,100">&lt;div class=typed-speed8&gt;
 Vous décidez d&#39;appeler votre ami... Vous lui expliquez la situation... Malgré son apparente déception, votre ami se montre raisonnable et comprend ce que vous lui expliquez.
 &lt;/div&gt;
 
 [[Pour finir]]
 
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="Ne rien dire" tags="glitch" position="1976,1103" size="100,100">&lt;div class=typed-speed8&gt;
+</tw-passagedata><tw-passagedata pid="16" name="Ne rien dire" tags="glitch" position="1976,1103" size="100,100">&lt;div class=typed-speed8&gt;
 Vous décidez tout de même de vous mettre au travail. Vous prenez du temps et vous vous rendez bien compte que ce que vous produisez n&#39;est pas excellent, mais vous vous donnez du mal.
 Pas le temps de relire, votre ami est dans l&#39;urgence et vous devez envoyer rapidement le dossier à l&#39;université.
 &lt;/div&gt;
 
 [[Les années passent]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="17" name="Pour finir" tags="glitch" position="2379,283" size="100,100">&lt;div class=typed-speed8&gt;Votre égo et votre fierté sont piqués et vous vous en voulez de ne pas avoir pu aider votre ami... Après tout vous auriez tout aussi bien fait de ne pas lui proposer d&#39;aide.
+</tw-passagedata><tw-passagedata pid="17" name="Pour finir" tags="glitch" position="2379,283" size="100,100">&lt;div class=typed-speed8&gt;Votre égo et votre fierté sont piqués et vous vous en voulez de ne pas avoir pu aider votre ami... Après tout vous auriez tout aussi bien fait de ne pas lui proposer d&#39;aide.
 Vous apprenez que votre ami s&#39;est débrouillé sans vous, puisqu&#39;il est maintenant docteur en biologie marine...
 &lt;/div&gt;
 
 [[Terminer]]
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="18" name="Terminer" tags="glitch Moyenne" position="2945.3333333333335,166" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="18" name="Terminer" tags="glitch Moyenne" position="2945,166" size="100,100">&lt;div class=typed-speed6&gt;
 Après avoir rencontré votre ami, et l&#39;avoir accompagné au café,
 
 vous avez décider de l&#39;aider.
@@ -478,11 +443,7 @@ code: 68 74 74 70 73 3A 2F 2F 67 77 65 6E 64 61 6C 6A 75 64 69 63 2E 63 6F 6D 2F
 &lt;/div&gt;
 
 [[Au débat]]
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="19" name="Au débat" tags="glitch" position="1166.6666666666667,1124.9999999999998" size="100,100">Quelques citations pour vous aider dans le débat
+</tw-passagedata><tw-passagedata pid="19" name="Au débat" tags="glitch" position="1166,1124" size="100,100">Quelques citations pour vous aider dans le débat
 
 
 
@@ -507,32 +468,24 @@ Jean Paul Sartre → Les mains sales
 
 Terminer le débat et &lt;span class=&quot;lienVisible&quot;&gt;[[Jouer]] &lt;/span&gt; une autre fois ? 
 
-</tw-passagedata><tw-passagedata pid="20" name="Continuer quand même" tags="glitch" position="2797,947.6666666666666" size="100,100">&lt;div class=typed-speed8&gt;
+</tw-passagedata><tw-passagedata pid="20" name="Continuer quand même" tags="glitch" position="2797,947" size="100,100">&lt;div class=typed-speed8&gt;
 Vous donnez l&#39;ordre à votre assistant de lancer la tâche d&#39;écriture. Quelques heures plus tard, vous lisez ce que l&#39;ordinateur à écrit, et vous vous rendez-compte que le résultat est plus que satisfaisant...
 &lt;/div&gt;
 
 [[Vous donnez les textes à votre ami]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="21" name="Ne pas trahir sa confiance" tags="glitch" position="2408,958" size="100,100">&lt;div class=typed-speed8&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Ne pas trahir sa confiance" tags="glitch" position="2408,958" size="100,100">&lt;div class=typed-speed8&gt;
 Vous revenez sur vos mauvaises pensées, et vous vous résolvez à aider votre ami sans recourir à une l&#39;Intelligence Artificielle.
 &lt;/div&gt;
 
 [[Accepter de l&#39;aider à la rédaction]]
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="22" name="Vous donnez les textes à votre ami" tags="glitch" position="3195,877" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="22" name="Vous donnez les textes à votre ami" tags="glitch" position="3195,877" size="100,100">&lt;div class=typed-speed6&gt;
 ... Et dans un premier temps rien ne se passe. Votre ami trouve les écrits que vous lui avez donné de très bonne qualité. 
 Cependant au fond de vous, vous sentez que vous venez de faire une terrible erreur.
 &lt;/div&gt;
 
 [[Cependant...]]
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="23" name="Les années passent" tags="glitch" position="2316,1340" size="100,100">&lt;div class=typed-speed8&gt;
+</tw-passagedata><tw-passagedata pid="23" name="Les années passent" tags="glitch" position="2316,1340" size="100,100">&lt;div class=typed-speed8&gt;
 Le temps passe, et comme vous l&#39;aviez prédit vos écrit ne sont pas bons, et faisaient véritablement tache dans la thèse de votre ami... 
 
 Il n&#39;a pas obtenu son doctorat, et une dispute houleuse à éclatée entre vous et lui... 
@@ -544,9 +497,7 @@ Peut être valait il mieux ne pas l&#39;aider du tout?
 
 [[Mais un jour...]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;
 </tw-passagedata><tw-passagedata pid="24" name="Mais un jour..." tags="glitch" position="2561,1555" size="100,100">&lt;div class=typed-speed6&gt;
 ... malgré son échec universitaire, votre ami revient vers vous. Il a de nouveau besoin de votre aide : l&#39;occasion de se rattraper se présente. 
 Un poste important vient de se libérer, il vous demande de l&#39;épauler pour la rédaction d&#39;une lettre de motivation. Qu&#39;allez-vous faire ?
@@ -556,9 +507,7 @@ Un poste important vient de se libérer, il vous demande de l&#39;épauler pour 
 
 [[Tenter de l&#39;aider]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="25" name="Refuser" tags="glitch Riche" position="2278.3333333333335,1757.6666666666667" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="25" name="Refuser" tags="glitch Riche" position="2278,1757" size="100,100">&lt;div class=typed-speed6&gt;
 Vous pensez avoir fait assez de dégat comme ça, alors vous décider de ne pas lui venir en aide...
 
 Votre ami n&#39;auras pas sa place mais au moins ça ne sera pas de votre faute.
@@ -568,9 +517,7 @@ Vous avez le sentiment de ne rien avoir à vous reprocher.
 
 [[Au débat]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="26" name="Tenter de l&#39;aider" tags="glitch Riche" position="2667,1771" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="26" name="Tenter de l&#39;aider" tags="glitch Riche" position="2667,1771" size="100,100">&lt;div class=typed-speed6&gt;
 Vous vous donnez du mal sur cette lettre de motivation, et vous en êtes fier. 
 
 Votre ami sera surement pris, et ça vous permettra de vous racheter.
@@ -578,9 +525,7 @@ Votre ami sera surement pris, et ça vous permettra de vous racheter.
 
 [[Au débat]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="27" name="Cependant..." tags="glitch" position="3133,1307" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="27" name="Cependant..." tags="glitch" position="3133,1307" size="100,100">&lt;div class=typed-speed6&gt;
 Quelques mois plus tard, votre ami est appelé a comparaitre au tribunal pour fraude et mauvais usage d&#39;intelligence Artificielle.
 Il vous appelle, paniqué :
 &quot;Peter, est ce que tu as quelque chose à voir dans cette affaire ? &quot;
@@ -593,9 +538,7 @@ Maintenant il faut que vous preniez vos responsabilités.
 
 [[Mentir]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="28" name="Lui dire la vérité" tags="glitch Riche" position="3602,1331" size="100,100">&lt;div class=typed-speed8&gt;
+</tw-passagedata><tw-passagedata pid="28" name="Lui dire la vérité" tags="glitch Riche" position="3602,1331" size="100,100">&lt;div class=typed-speed8&gt;
 &quot;Oui. J&#39;ai peut-être quelque chose à avoir dans cette affaire. Je te demande pardon.&quot;
 Vous décidez de lui raconter toute la vérité, toute la honte que vous pesait quand il aurait simplement fallu avouer que vous ne pouviez pas l&#39;aider.
 
@@ -615,9 +558,7 @@ Avec un peu de chance, les conséquences ne seront pas trop dramatiques ...
 
 [[Au débat]]
 
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="29" name="Mentir" tags="glitch Riche" position="3543,1752" size="100,100">&lt;div class=typed-speed8&gt;&quot;je n&#39;ai rien avoir avec ça&quot; vous répondez, d&#39;un ton froid et sans appel.
+</tw-passagedata><tw-passagedata pid="29" name="Mentir" tags="glitch Riche" position="3543,1752" size="100,100">&lt;div class=typed-speed8&gt;&quot;je n&#39;ai rien avoir avec ça&quot; vous répondez, d&#39;un ton froid et sans appel.
 Votre ami est contraint de vous croire... Mais il restera toujours au fond de lui ce doute, que vous avez semé en le trahissant dans un moment difficile.
 Après l&#39;avoir accompagné dans ce café,
 Avoir parlé avec lui longuement,
@@ -628,10 +569,7 @@ Et vous le trahissez une fois de plus lorsque vient le temps de porter vos choix
 &lt;/div&gt;
 
 [[Au débat]]
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="30" name="Recommencer" tags="glitch" position="346,264.66666666666663" size="100,100">&lt;link href=&quot;https://fonts.googleapis.com/css?family=Space+Mono&quot; rel=&quot;stylesheet&quot;&gt;
+</tw-passagedata><tw-passagedata pid="30" name="Recommencer" tags="glitch" position="346,264" size="100,100">&lt;link href=&quot;https://fonts.googleapis.com/css?family=Space+Mono&quot; rel=&quot;stylesheet&quot;&gt;
 
 Bienvenue,
 
@@ -643,12 +581,8 @@ A la fin du jeu vous pourrez débattre autour des thèmes abordés et poursuivre
 
             Prêt ?
 			
-			&lt;span class=&quot;lienVisible&quot;&gt;[[Jouer]] &lt;/span&gt;
-
-
-			&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js&quot;&gt;&lt;/script&gt;</tw-passagedata></tw-storydata></div>
+&lt;span class=&quot;lienVisible&quot;&gt;[[Jouer]]&lt;/span&gt;
+</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,"")+".":": unknown error."),"object"===("undefined"==typeof n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}();!function(){function e(e,t){var a=String(e);switch(t){case"start":return a&&r.test(a)?a.replace(r,""):a;case"end":return a&&n.test(a)?a.replace(n,""):a;default:throw new Error('_trimFrom called with incorrect where parameter value: "'+t+'"')}}function t(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n="undefined"==typeof t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var r=/^[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*/,n=/[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*$/;Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(t===n||t!==t&&n!==n)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:t(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:n+t(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return e(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return e(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return e(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return e(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r,r<0&&(r=0)),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n,n<0&&(n=e-1)),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if(null==e||"object"!==("undefined"==typeof e?"undefined":_typeof(e))||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){var r=0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1));return e[r]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var t=Array.from(this);if(0===arguments.length)return t;var r=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),n=r.length;if(0===n)return t;for(var a=Array.prototype.indexOf,i=Array.prototype.push,o=0;o<n;++o){var e=r[o];a.call(t,e)===-1&&i.call(t,e)}return t}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;(r=e.call(this,t,r))!==-1;)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=Array.prototype.splice,a=Array.prototype.concat.apply([],arguments),i=[],o=0,s=a.length;o<s;++o)for(var u=a[o],l=0;(l=t.call(this,u,l))!==-1;)r.apply(i,n.call(this,l,1));return i}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do a.push(n.call(this,_random(0,i--),1)[0]);while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var t=arguments.length;if(0===t)return this.length>>>0;for(var r=Array.prototype.indexOf,n=Array.prototype.push,a=0;a<t;++a){var e=arguments[a];r.call(this,e)===-1&&n.call(this,e)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return this[t]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do o=_random(0,i);while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var t=arguments.length;if(0===t)return this.length>>>0;for(var r=Array.prototype.indexOf,n=Array.prototype.unshift,a=0;a<t;++a){var e=arguments[a];r.call(this,e)===-1&&n.call(this,e)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function e(t,r,n){var e=Number(t);return Number.isNaN(e)?NaN:e.clamp(r,n)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||!function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch("undefined"==typeof i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return String.prototype.indexOf.apply(this,arguments)!==-1}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;(n=t.call(this,e,n))!==-1;)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n,a<0&&(a=0)):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return"undefined"!=typeof r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Windows:t||e.includes("iemobile"),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null;return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a})}(),_ref3=function(){function e(t){if("object"!==("undefined"==typeof t?"undefined":_typeof(t))||null==t)return t;if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return Array.isArray(t)?r=[]:t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){var a=n.nodeName.toUpperCase();switch(a){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===("undefined"==typeof e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){return jQuery(document.createElement("span")).addClass("error").attr("title",r).text(L10n.get("errorTitle")+": "+(t||"unknown error")).appendTo(e),!1}function i(e,t){var r=i;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){var n=[].concat(_toConsumableArray(e)).map(function(e){return r(e[0],t)+" ⇒ "+r(e[1],t)}).join("; ");return"( "+n+" )"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref3.clone,convertBreaks=_ref3.convertBreaks,safeActiveElement=_ref3.safeActiveElement,setPageElement=_ref3.setPageElement,throwError=_ref3.throwError,toStringOrDefault=_ref3.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments)}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this;var a=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(a,t,e)}),this.append(a),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){return Object.prototype.toString.call(e).slice(8,-1)}function r(e){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function n(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function a(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function i(e){if(null==e)return"";var t=String(e);return t&&h.test(t)?t.replace(p,function(e){return g[e]}):t}function o(e){if(null==e)return"";var t=String(e);return t&&y.test(t)?t.replace(m,function(e){return v[e.toLowerCase()]}):t}function s(e,t){var r=String(e),n=Math.trunc(t),a=r.charCodeAt(n);if(Number.isNaN(a))return{char:"",start:-1,end:-1};var i={char:r.charAt(n),start:n,end:n};if(a<55296||a>57343)return i;if(a>=55296&&a<=56319){var o=n+1;if(o>=r.length)return i;var s=r.charCodeAt(o);return s<56320||s>57343?i:(i.char=i.char+r.charAt(o),i.end=o,i)}if(0===n)return i;var u=n-1,l=r.charCodeAt(u);return l<55296||l>56319?i:(i.char=r.charAt(u)+i.char,i.start=u,i)}function u(){return(Has.performance?performance:Date).now()}function l(e){var t=/^([+-]?(?:\d*\.)?\d+)([Mm]?[Ss])$/,r=t.exec(String(e));if(null===r)throw new SyntaxError('invalid time value syntax: "'+e+'"');var n=Number(r[1]);if(/^[Ss]$/.test(r[2])&&(n*=1e3),Number.isNaN(n)||!Number.isFinite(n))throw new RangeError('invalid time value: "'+e+'"');return n}function c(e){if("number"!=typeof e||Number.isNaN(e)||!Number.isFinite(e)){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":t='"'+e+'"';break;case"number":t=String(e);break;default:t=Object.prototype.toString.call(e)}throw new Error("invalid milliseconds: "+t)}return e+"ms"}function d(e){if(!e.includes("-"))switch(e){case"bgcolor":return"backgroundColor";case"float":return"cssFloat";default:return e}var t="-ms-"===e.slice(0,4)?e.slice(1):e;return t.split("-").map(function(e,t){return 0===t?e:e.toUpperFirst()}).join("")}function f(e){var t=document.createElement("a"),r=Object.create(null);t.href=e,t.search&&t.search.replace(/^\?/,"").splitOrEmpty(/(?:&(?:amp;)?|;)/).forEach(function(e){var t=e.split("="),n=_slicedToArray(t,2),a=n[0],i=n[1];r[a]=i});var n=t.host&&"/"!==t.pathname[0]?"/"+t.pathname:t.pathname;return{href:t.href,protocol:t.protocol,host:t.host,hostname:t.hostname,port:t.port,path:""+n+t.search,pathname:n,query:t.search,search:t.search,queries:r,searches:r,hash:t.hash}}var p=/[&<>"'`]/g,h=new RegExp(p.source),g=Object.freeze({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}),m=/&(?:amp|#38|#x26|lt|#60|#x3c|gt|#62|#x3e|quot|#34|#x22|apos|#39|#x27|#96|#x60);/gi,y=new RegExp(m.source,"i"),v=Object.freeze({"&amp;":"&","&#38;":"&","&#x26;":"&","&lt;":"<","&#60;":"<","&#x3c;":"<","&gt;":">","&#62;":">","&#x3e;":">","&quot;":'"',"&#34;":'"',"&#x22;":'"',"&apos;":"'","&#39;":"'","&#x27;":"'","&#96;":"`","&#x60;":"`"});return Object.freeze(Object.defineProperties({},{toEnum:{value:e},toStringTag:{value:t},isNumeric:{value:r},isBoolean:{value:n},slugify:{value:a},escape:{value:i},unescape:{value:o},charAndPosAt:{value:s},fromCssTime:{value:l},toCssTime:{value:c},fromCssProperty:{value:d},parseUrl:{value:f},now:{value:u},random:{value:Math.random},entityEncode:{value:i},entityDecode:{value:o},evalExpression:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}},evalStatements:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}}}))}(),SimpleAudio=function(){function e(){return g}function t(e){g=!!e,l("mute",g)}function r(){return p}function n(e){p=Math.clamp(e,.2,5),l("rate",p)}function a(){return h}function i(e){h=Math.clamp(e,0,1),l("volume",h)}function o(){l("stop")}function s(e,t){if("function"!=typeof t)throw new Error("callback parameter must be a function");f.set(e,t)}function u(e){f.delete(e)}function l(e,t){f.forEach(function(r){return r(e,t)})}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(m,[null].concat(t)))}function d(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(y,[null].concat(t)))}var f=new Map,p=1,h=1,g=!1,m=function(){function e(t){if(_classCallCheck(this,e),Array.isArray(t))this._create(t);else{if(!(t instanceof e))throw new Error("sources parameter must be an array of either URLs or source objects");this._copy(t)}}return _createClass(e,[{key:"_create",value:function(t){if(!Array.isArray(t)||0===t.length)throw new Error("sources parameter must be an array of either URLs or source objects");var r=/^data:\s*audio\/([^;,]+)\s*[;,]/i,n=/\.([^.\/\\]+)$/,a=e.getType,i=[],o=document.createElement("audio");if(t.forEach(function(e){var t=null;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":var s=void 0;if("data:"===e.slice(0,5)){if(s=r.exec(e),null===s)throw new Error("source data URI missing media type")}else if(s=n.exec(Util.parseUrl(e).pathname),null===s)throw new Error("source URL missing file extension");var u=a(s[1]);null!==u&&(t={src:e,type:u});break;case"object":if(null===e)throw new Error("source object cannot be null");if(!e.hasOwnProperty("src"))throw new Error('source object missing required "src" property');
