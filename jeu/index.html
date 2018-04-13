@@ -30,6 +30,7 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
 -->
 <script id="script-libraries" type="text/javascript">
 if(document.head&&document.addEventListener&&document.querySelector&&Object.create&&Object.freeze&&JSON){document.documentElement.setAttribute("data-init", "loading");
@@ -61,7 +62,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 /*
  * jQuery throttle / debounce - v1.1 - 3/7/2010
  * http://benalman.com/projects/jquery-throttle-debounce-plugin/
- *
+ * 
  * Copyright (c) 2010 "Cowboy" Ben Alman
  * Dual licensed under the MIT and GPL licenses.
  * http://benalman.com/about/license/
@@ -251,6 +252,7 @@ body {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 /*! typed.js integration module for SugarCube */
 !function(){"use strict";function getInlineOptions(classNames){var options={},typedRe=/^typed(?:-(\w+))+\b$/,parseRe=/-(speed|delay)(\d+)\b/g,match=void 0;if("typed"!==classNames)for(var classOpts=classNames.toLowerCase().split(/\s+/),i=0;i<classOpts.length;++i)if(typedRe.test(classOpts[i])){for(;null!==(match=parseRe.exec(classOpts[i]));)switch(match[1]){case"speed":options.typeSpeed=Number(match[2]);break;case"delay":options.startDelay=Number(match[2])}break}return options}function typedCallbackFactory(el,callback){return function(){var $outer=jQuery(el),$inner=jQuery('<div class="typedjs-text-wrapper" style="display:block;position:absolute;left:0;top:0;"><span class="typed"></span></div>'),$source=$outer.children('[class|="typed"]'),options=jQuery.extend({strings:["^0 "+$source.html()],typeSpeed:40,startDelay:400,onComplete:function(){$inner.children(".typed-cursor").remove(),callback()},preStringTyped:function(){jQuery.event.trigger(":typedstart")},onStringTyped:function(){jQuery.event.trigger(":typedstop")}},getInlineOptions($source.attr("class")));$outer.append($inner),new Typed($inner.children()[0],options)}}postrender[":typedSetupHandler"]=function(content){jQuery(content).find('[class|="typed"]').addClass("typed").css("visibility","hidden").wrap('<div class="typedjs-outer-wrapper" style="display:block;position:relative;"></div>')},postdisplay[":typedAnimationHandler"]=function(){var $elements=jQuery("#passages .typedjs-outer-wrapper");if(0!==$elements.length){for(var callback=function(){jQuery.event.trigger(":typedcomplete")},i=$elements.length-1;i>=0;--i)callback=typedCallbackFactory($elements[i],callback);callback()}}}();
@@ -314,8 +316,9 @@ document.body.dataset.tilt="";
 document.body.dataset.tiltMax="2.5";
 
 
+
 </script><tw-tag name="vert" color="red"></tw-tag>,<tw-tag name="Pauvre" color="red"></tw-tag>,<tw-tag name="Riche" color="yellow"></tw-tag>,<tw-tag name="glitch" color="green"></tw-tag>,<tw-tag name="Moyenne" color="blue"></tw-tag><tw-passagedata pid="1" name="Jouer" tags="glitch" position="1231,76" size="100,100">&lt;div class= typed-speed8&gt;
-Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accélérée et l&#39;intelligence artificielle a prise une place dominante dans la société. De nombreuses tâches et métiers ont pu être automatisés pour nous faciliter la vie. Cependant, l&#39;humain a pris de moins en moins d&#39;importance dans la société. Un équilibre fut rompu, de nombreux emplois ont disparu, entraînant un taux important de chômage causant  une précarité sans précédent dans la société. La population a été poussée à agir et à fermement réglementer l&#39;usage des intelligences artificielles dans les domaines professionnels. Aujourd&#39;hui, l&#39;utilisation d&#39;une intelligence artificielle dans le milieu professionnel est fortement réprimée dans la société. Dans ce contexte, vous êtes Peter Smithee, développeur de renom. Vous avez notamment participé à la démocratisation des I.A. Un beau jour, au détour d&#39;une rue, vous croisez un ami d&#39;enfance qui semble perturbé.
+Dans un futur proche, l&#39;évolution technologique s&#39;est rapidement accélérée et l&#39;intelligence artificielle a pris une place dominante dans la société. De nombreuses tâches et métiers ont pu être automatisés pour nous faciliter la vie. Cependant, l&#39;humain a pris de moins en moins d&#39;importance dans la société. Un équilibre fut rompu, de nombreux emplois ont disparu, entraînant un taux important de chômage causant  une précarité sans précédent dans la société. La population a été poussée à agir et à fermement réglementer l&#39;usage des intelligences artificielles dans les domaines professionnels. Aujourd&#39;hui, l&#39;utilisation d&#39;une intelligence artificielle dans le milieu professionnel est fortement réprimée dans la société. Dans ce contexte, vous êtes Peter Smithee, développeur de renom. Vous avez notamment participé à la démocratisation des I.A. Un beau jour, au détour d&#39;une rue, vous croisez un ami d&#39;enfance qui semble perturbé.
 &lt;/div&gt;
 
 &lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
@@ -402,7 +405,7 @@ Il vous reste cependant toujours la possibilité de l&#39;aider à écrire...
 
 [[Accepter de l&#39;aider à la rédaction]]
 
-</tw-passagedata><tw-passagedata pid="9" name="Lui parler des IA" tags="glitch" position="2137,570" size="100,100">&lt;div class= typed-speed8&gt;Quand vous évoquez ces robots, votre ami devient nerveux et vous fait part de sa réticence à l&#39;encontre des intelligences artificielles... D&#39;ailleurs, il n&#39;en possède pas... Il vous fait aussi promettre de l&#39;aider normalement, sans utiliser d&#39;intelligences artificielles.
+</tw-passagedata><tw-passagedata pid="9" name="Lui parler des IA" tags="glitch" position="2137,570" size="100,100">&lt;div class= typed-speed8&gt;Quand vous évoquez ces robots, votre ami devient nerveux et vous fait part de sa réticence à l&#39;encontre des Intelligences Artificielles... D&#39;ailleurs, il n&#39;en possède pas... Il vous fait aussi promettre de l&#39;aider normalement, sans utiliser d&#39;Intelligences Artificielles.
 &lt;/div&gt;
 
 &lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
@@ -463,7 +466,7 @@ code : 68 74 74 70 73 3A 2F 2F 67 77 65 6E 64 61 6C 6A 75 64 69 63 2E 63 6F 6D 2
 [[Recommencer]]
 
 
-</tw-passagedata><tw-passagedata pid="14" name="Utiliser l&#39;IA quand même" tags="glitch" position="2614,779" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="14" name="Utiliser l&#39;IA quand même" tags="glitch" position="2614,777.3333333333334" size="100,100">&lt;div class=typed-speed6&gt;
 De retour chez vous, vous vous sentez pris d&#39;incertitude: êtes vous prêt à trahir la confiance de votre ami et risquer de vous mettre tous les deux en danger? Le jeu en vaut il la chandelle?
 &lt;/div&gt;
 
@@ -481,7 +484,7 @@ Vous décidez d&#39;appeler votre ami... Vous lui expliquez la situation... Malg
 
 [[Pour finir]]
 
-</tw-passagedata><tw-passagedata pid="16" name="Ne rien dire" tags="glitch" position="1976,1103" size="100,100">&lt;div class=typed-speed8&gt;
+</tw-passagedata><tw-passagedata pid="16" name="Ne rien dire" tags="glitch" position="2026,1064.6666666666667" size="100,100">&lt;div class=typed-speed8&gt;
 Vous décidez tout de même de vous mettre au travail. Vous prenez du temps et vous vous rendez bien compte que ce que vous produisez n&#39;est pas excellent, mais vous vous donnez du mal.
 Pas le temps de relire, votre ami est dans l&#39;urgence et vous devez envoyer rapidement le dossier à l&#39;université.
 &lt;/div&gt;
@@ -497,7 +500,7 @@ Vous apprenez que votre ami s&#39;est débrouillé sans vous, puisqu&#39;il est 
 &lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Terminer]]
-</tw-passagedata><tw-passagedata pid="18" name="Terminer" tags="glitch Moyenne" position="2945,166" size="100,100">&lt;div class=typed-speed6&gt;
+</tw-passagedata><tw-passagedata pid="18" name="Terminer" tags="glitch Moyenne" position="2341.6666666666665,104.33333333333333" size="100,100">&lt;div class=typed-speed6&gt;
 Après avoir rencontré votre ami, et l&#39;avoir accompagné au café,
 
 vous avez décider de l&#39;aider.
@@ -520,7 +523,7 @@ code: 68 74 74 70 73 3A 2F 2F 67 77 65 6E 64 61 6C 6A 75 64 69 63 2E 63 6F 6D 2F
 &lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
 [[Au débat]]
-</tw-passagedata><tw-passagedata pid="19" name="Au débat" tags="glitch" position="1166,1124" size="100,100">Quelques citations pour vous aider dans le débat
+</tw-passagedata><tw-passagedata pid="19" name="Au débat" tags="glitch" position="974.3333333333333,1139" size="100,100">Quelques citations pour vous aider dans le débat
 
 
 
@@ -617,7 +620,7 @@ Votre ami sera surement pris, et ça vous permettra de vous racheter.
 [[Au débat]]
 
 </tw-passagedata><tw-passagedata pid="27" name="Cependant..." tags="glitch" position="3133,1307" size="100,100">&lt;div class=typed-speed6&gt;
-Quelques mois plus tard, votre ami est appelé a comparaitre au tribunal pour fraude et mauvais usage d&#39;intelligence Artificielle.
+Quelques mois plus tard, votre ami est appelé a comparaitre au tribunal pour fraude et mauvais usage d&#39;Intelligence Artificielle.
 Il vous appelle, paniqué :
 &quot;Peter, est ce que tu as quelque chose à voir dans cette affaire ? &quot;
 Vous saviez qu&#39;on finirait par savoir qu&#39;une IA était impliquée...
@@ -631,9 +634,9 @@ Maintenant il faut que vous preniez vos responsabilités.
 
 [[Mentir]]
 
-</tw-passagedata><tw-passagedata pid="28" name="Lui dire la vérité" tags="glitch Riche" position="3602,1331" size="100,100">&lt;div class=typed-speed8&gt;
+</tw-passagedata><tw-passagedata pid="28" name="Lui dire la vérité" tags="glitch Riche" position="3642,1402.6666666666667" size="100,100">&lt;div class=typed-speed8&gt;
 &quot;Oui. J&#39;ai peut-être quelque chose à avoir dans cette affaire. Je te demande pardon.&quot;
-Vous décidez de lui raconter toute la vérité, toute la honte que vous pesait quand il aurait simplement fallu avouer que vous ne pouviez pas l&#39;aider.
+Vous décidez de lui raconter toute la vérité, toute la honte qui vous pesait quand il aurait simplement fallu avouer que vous ne pouviez pas l&#39;aider.
 
 Après l&#39;avoir accompagné dans ce café,
 
@@ -655,11 +658,12 @@ Avec un peu de chance, les conséquences ne seront pas trop dramatiques ...
 
 </tw-passagedata><tw-passagedata pid="29" name="Mentir" tags="glitch Riche" position="3543,1752" size="100,100">&lt;div class=typed-speed8&gt;&quot;je n&#39;ai rien avoir avec ça&quot; vous répondez, d&#39;un ton froid et sans appel.
 Votre ami est contraint de vous croire... Mais il restera toujours au fond de lui ce doute, que vous avez semé en le trahissant dans un moment difficile.
-Après l&#39;avoir accompagné dans ce café,
-Avoir parlé avec lui longuement,
-Lui avoir proposé votre aide
-Vous avez finalement choisi de trahir sa confiance
-En utilisant une IA dans le but de créer des parties de sa thèse.
+Après l&#39;avoir accompagné dans ce café;
+avoir parlé avec lui longuement;
+lui avoir proposé votre aide;
+vous avez finalement choisi de trahir sa confiance,
+en utilisant une IA dans le but de créer des parties de sa thèse.
+
 Et vous le trahissez une fois de plus lorsque vient le temps de porter vos choix..
 &lt;/div&gt;
 
