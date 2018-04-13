@@ -153,6 +153,7 @@ body.glitch {
   	outline: none;
 }
 
+
 .link-internal:hover {
     text-decoration: none;
 }
@@ -275,14 +276,14 @@ body {
 importScripts("https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js");
 
 
-$(document).ready(function() {
-	var myAudio = new Audio('bgSound.mp3');
-	myAudio.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-	}, false);
-myAudio.play();
-})
+// $(document).ready(function() {
+// 	var myAudio = new Audio('bgSound.mp3');
+// 	myAudio.addEventListener('ended', function() {
+//     this.currentTime = 0;
+//     this.play();
+// 	}, false);
+// myAudio.play();
+// })
 
 $(document).on(':typedcomplete', function () {
 	var elems = document.getElementsByClassName('link-internal');
@@ -294,27 +295,23 @@ for (var i=0;i<elems.length;i+=1){
 
 $(document.body).on('click', '.passer' ,function(){
 
-
 	var etape1 = $(this).siblings().find('span.typed').hide();
 	var etape2 = $(this).siblings().find('div.typed').css("visibility", "visible");
 	var etape3 = $(this).parent().find('.link-internal').css("display", "inline-block");
+	console.log($(this).parent().find('.link-internal'));
 	$('.typed-cursor').hide();
-	console.log(etape2);
-	console.log(etape3);
 	// $('span.typed').hide();
 	// $('div.typed').css("visibility", "visible");
 	// $('.link-internal').css("display", "inline-block");
 });
+$(document.body).on('mouseover','.link-internal' ,function(){
+  var myAudio2 = new Audio('btnSound.wav');
+	myAudio2.volume = 0.07;
+	myAudio2.play();
+});
 
-$(document.body).on('click', '.link-internal' ,function(){
-	var etape1 = $(this).siblings().find('span.typed').show();
-	var etape2 = $(this).siblings().find('div.typed').css("visibility", "hidden");
-	var etape3 = $(this).parent().find('.link-internal').css("display", "none");
-	console.log(etape2);
-	console.log(etape3);
-	// $('span.typed').hide();
-	// $('div.typed').css("visibility", "visible");
-	// $('.link-internal').css("display", "inline-block");
+$(document.body).on('mouseout','.link-internal' ,function(){
+	myAudio2.stop();
 });
 
 
@@ -358,7 +355,7 @@ Vous prenez congé de votre ami en utilisant une excuse générique, et vous con
 
 &lt;div class=&quot;passer&quot;&gt;Passer&lt;/div&gt;
 
-[[Aller au café]]
+&lt;div class=&quot;test&quot;&gt;[[Aller au café]]&lt;/div&gt;
 
 
 </tw-passagedata><tw-passagedata pid="5" name="Vous rentrez chez vous" tags="glitch" position="1031,393" size="100,100">&lt;div class= typed-speed6&gt;Vous rentrez chez vous et vous repensez à la rencontre avec votre ami... Un ami d&#39;enfance que vous avez laissé sans aide, que vous avez repoussé sans vergogne.
