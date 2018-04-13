@@ -275,6 +275,15 @@ body {
 importScripts("https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js");
 
 
+$(document).ready(function() {
+	var myAudio = new Audio('bgSound.mp3');
+	myAudio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+	}, false);
+myAudio.play();
+})
+
 $(document).on(':typedcomplete', function () {
 	var elems = document.getElementsByClassName('link-internal');
 for (var i=0;i<elems.length;i+=1){
